@@ -1,10 +1,10 @@
-SOURCESWITHMAIN := $(wildcard *.cpp)
-SOURCES := $(patsubst shape.cpp, , $(SOURCESWITHMAIN))
-OBJECTS := $(patsubst %.cpp, obj/%.o, $(SOURCES))
-DEPENDS := $(patsubst %.cpp, obj/%.dep, $(SOURCESWITHMAIN))
+SOURCESWITHMAIN := $(wildcard src/*.cpp)
+SOURCES := $(patsubst main.cpp, , $(SOURCESWITHMAIN))
+OBJECTS := $(patsubst src/%.cpp, obj/%.o, $(SOURCES))
+DEPENDS := $(patsubst src/%.cpp, obj/%.dep, $(SOURCESWITHMAIN))
 
-bin/program: ./bin lib/libStat.a shape.cpp
-	@g++ shape.cpp -L lib -l Stat -o bin/program
+bin/program: ./bin lib/libStat.a src/main.cpp
+	@g++ src/main.cpp -L lib -l Stat -o bin/program
 	@echo "Succesfully..."
 ./bin:
 	@mkdir -p bin
@@ -15,10 +15,10 @@ lib/libStat.a: ./lib $(OBJECTS)
 ./lib:
 	@mkdir -p lib
 	@echo "lib folder created..."
-obj/%.o: %.cpp
+obj/%.o: src/%.cpp
 	@mkdir -p obj
 	@g++ -c $< -o $@
-obj/%.dep: %.cpp
+obj/%.dep: src/%.cpp
 	@mkdir -p obj
 	@g++ -MM $< -MT "$@ $(patsubst %.dep, %.o, $@)" -o $@
 -include $(DEPENDS)
