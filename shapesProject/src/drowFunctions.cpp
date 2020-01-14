@@ -1,10 +1,23 @@
 #include <iostream>
 #include <limits>
 
-void printLineStar(int);       ///print stars
-void printLineSpace(int);      ///print spaces
-void checkWidth(int &, int &); ///check odd or even and when it's odd print first *
-void giveInput(int &, int, int); ///give valid input from range
+/**
+@brief print count amount of stars
+@param count - amount of stars
+*/
+void printLineStar(int count);
+/**
+@brief print count amount of spaces
+@param count - amount of spaces
+*/
+void printLineSpace(int count);
+/**
+@brief Check odd or even and when it's odd print first *
+@param &row - reference to rows for adding 1 to row
+@param &width - reference to width for checking
+*/
+void checkWidth(int &row, int &width);
+void giveInput(int &inp, int f, int l); ///give valid input from range
 
 ///drow triangle by width
 void drowTriangleWidth() {

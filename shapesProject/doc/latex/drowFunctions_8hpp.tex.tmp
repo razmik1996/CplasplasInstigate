@@ -1,0 +1,99 @@
+\hypertarget{drowFunctions_8hpp}{}\section{drow\+Functions.\+hpp File Reference}
+\label{drowFunctions_8hpp}\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+
+
+Prototypes of functions for drowing.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{drowFunctions_8hpp_a81a802710df33ba479de917f16f0a0bd}{drow\+Triangle\+Width} ()
+\begin{DoxyCompactList}\small\item\em Draw triangle by using width of basis. \end{DoxyCompactList}\item 
+void \hyperlink{drowFunctions_8hpp_a89574d02d67a9b9fe95e8e20c0d2b31d}{drow\+Triangle\+Height} ()
+\begin{DoxyCompactList}\small\item\em Draw triangle by using height. \end{DoxyCompactList}\item 
+void \hyperlink{drowFunctions_8hpp_a6b947833698c96fa6b687469c8da26bd}{drow\+Diamond} ()
+\begin{DoxyCompactList}\small\item\em Draw filled diamond. \end{DoxyCompactList}\item 
+void \hyperlink{drowFunctions_8hpp_a3b94792d8715e6ed88255e52666d8a73}{drow\+Not\+Filled\+Diamond} ()
+\begin{DoxyCompactList}\small\item\em Draw not filled diamond. \end{DoxyCompactList}\item 
+void \hyperlink{drowFunctions_8hpp_ad759e54fade96f157e12dcb170831bcf}{give\+Input} (int \&inp, int f, int l)
+\begin{DoxyCompactList}\small\item\em Take valid input from customer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Prototypes of functions for drowing. 
+
+\begin{DoxyAuthor}{Author}
+Razmik Martirosyan 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{drowFunctions_8hpp_a6b947833698c96fa6b687469c8da26bd}\label{drowFunctions_8hpp_a6b947833698c96fa6b687469c8da26bd}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!drow\+Diamond@{drow\+Diamond}}
+\index{drow\+Diamond@{drow\+Diamond}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{drow\+Diamond()}{drowDiamond()}}
+{\footnotesize\ttfamily void drow\+Diamond (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draw filled diamond. 
+
+Draw filled diamond. \mbox{\Hypertarget{drowFunctions_8hpp_a3b94792d8715e6ed88255e52666d8a73}\label{drowFunctions_8hpp_a3b94792d8715e6ed88255e52666d8a73}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!drow\+Not\+Filled\+Diamond@{drow\+Not\+Filled\+Diamond}}
+\index{drow\+Not\+Filled\+Diamond@{drow\+Not\+Filled\+Diamond}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{drow\+Not\+Filled\+Diamond()}{drowNotFilledDiamond()}}
+{\footnotesize\ttfamily void drow\+Not\+Filled\+Diamond (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draw not filled diamond. 
+
+Draw not filled diamond. \mbox{\Hypertarget{drowFunctions_8hpp_a89574d02d67a9b9fe95e8e20c0d2b31d}\label{drowFunctions_8hpp_a89574d02d67a9b9fe95e8e20c0d2b31d}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!drow\+Triangle\+Height@{drow\+Triangle\+Height}}
+\index{drow\+Triangle\+Height@{drow\+Triangle\+Height}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{drow\+Triangle\+Height()}{drowTriangleHeight()}}
+{\footnotesize\ttfamily void drow\+Triangle\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draw triangle by using height. 
+
+Draw triangle by using height. \mbox{\Hypertarget{drowFunctions_8hpp_a81a802710df33ba479de917f16f0a0bd}\label{drowFunctions_8hpp_a81a802710df33ba479de917f16f0a0bd}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!drow\+Triangle\+Width@{drow\+Triangle\+Width}}
+\index{drow\+Triangle\+Width@{drow\+Triangle\+Width}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{drow\+Triangle\+Width()}{drowTriangleWidth()}}
+{\footnotesize\ttfamily void drow\+Triangle\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draw triangle by using width of basis. 
+
+Draw triangle by using width of basis.
+
+drow triangle by width \mbox{\Hypertarget{drowFunctions_8hpp_ad759e54fade96f157e12dcb170831bcf}\label{drowFunctions_8hpp_ad759e54fade96f157e12dcb170831bcf}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!give\+Input@{give\+Input}}
+\index{give\+Input@{give\+Input}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{give\+Input()}{giveInput()}}
+{\footnotesize\ttfamily void give\+Input (\begin{DoxyParamCaption}\item[{int \&}]{inp,  }\item[{int}]{f,  }\item[{int}]{l }\end{DoxyParamCaption})}
+
+
+
+Take valid input from customer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&inp} & -\/ reference to varriable for input \\
+\hline
+{\em f,l} & -\/ input range \\
+\hline
+\end{DoxyParams}
+catch fails
+
+exit when customer type -\/1
+
+validate input range
+
+if all is okay 

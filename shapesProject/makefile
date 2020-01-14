@@ -34,3 +34,8 @@ push:
 	@git commit -m"some changes"
 	@git push origin master
 
+.PHONY: help
+help:
+	@echo "type make for compiling"
+	@echo "type make clean for cleaning"
+	@echo "type make push for fast pushing to repo"

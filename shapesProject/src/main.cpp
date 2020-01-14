@@ -1,9 +1,20 @@
 #include <iostream>
-#include "drowFunctions.hpp"    ///include functions
+#include "drowFunctions.hpp"  ///include functions
 
-///just menu with switch
+/**
+@file main.cpp
+@brief Menu
+@author Razmik Martirosyan
+*/
 
+/**
+@brief Function for printing menu
+ */
 void printmenu();
+/**
+@brief Function for switch block
+@param switchNumber - variable for switching
+*/
 void inputSwitchNumber(int &switchNumber);
 
 int main() {
@@ -12,6 +23,7 @@ int main() {
 		printmenu();
 		inputSwitchNumber(switchNumber);
 	}
+	return 0;
 }
 
 void printmenu() {
