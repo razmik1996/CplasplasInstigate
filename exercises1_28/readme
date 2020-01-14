@@ -20,6 +20,7 @@ can guess it in 7 or less guesses.
 /////////////////////////////////////////////////////////////////////////////////////////
 
 For documentation open html file /doc/html/index.html
+Example firefox doc/html/index.html
 You can run program after compiling just type make
 for other commands
 type make help

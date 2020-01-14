@@ -18,15 +18,6 @@ void printmenu();
 */
 void inputSwitchNumber(int &switchNumber);
 
-int main() {
-	while(true) {
-		int switchNumber = 0;
-		printmenu();
-		inputSwitchNumber(switchNumber);
-	}
-	return 0;
-}
-
 void printmenu() {
 	std::cout << "What do you want to drow?" << std::endl;
 	std::cout << " 1 - for triangle by width" << std::endl;
@@ -41,19 +32,28 @@ void inputSwitchNumber(int &switchNumber) {
 	giveInput(switchNumber, 1, 4);	
 	switch(switchNumber) {
 		case 1:
-			drowTriangleWidth();
+			drawTriangleWidth();
 			break;
 		case 2:
-			drowTriangleHeight();
+			drawTriangleHeight();
 			break;
 		case 3:
-			drowDiamond();
+			drawDiamond();
 			break;
 		case 4:
-			drowNotFilledDiamond();
+			drawNotFilledDiamond();
 			break;
 		default:
 			std::cout << "Invalid input please trype from 1 to 4: ";
 			break;
 	}
+}
+
+int main() {
+	while(true) {
+		int switchNumber = 0;
+		printmenu();
+		inputSwitchNumber(switchNumber);
+	}
+	return 0;
 }

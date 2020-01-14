@@ -1,115 +1,6 @@
 #include <iostream>
 #include <limits>
 
-/**
-@brief print count amount of stars
-@param count - amount of stars
-*/
-void printLineStar(int count);
-/**
-@brief print count amount of spaces
-@param count - amount of spaces
-*/
-void printLineSpace(int count);
-/**
-@brief Check odd or even and when it's odd print first *
-@param &row - reference to rows for adding 1 to row
-@param &width - reference to width for checking
-*/
-void checkWidth(int &row, int &width);
-void giveInput(int &inp, int f, int l); ///give valid input from range
-
-///drow triangle by width
-void drowTriangleWidth() {
-	int width = 0, i = 0, j = 0;
-	std::cout << "Enter width of base: ";
-	giveInput(width, 3, 30);
-	checkWidth(i, width);
-	j = (width/2)-1;
-	for(; j >= 0; --j) {
-		printLineSpace(j);
-		i += 2;
-		printLineStar(i);
-		std::cout << std::endl;
-	}	
-}
-
-///drow triangle by height
-void drowTriangleHeight() {
-	int height = 0, i = 0, j = 0;
-	std::cout << "Enter height of triangle: ";
-	giveInput(height, 2, 30);
-	int jcount = (2 * height)-1;
-	for(i = 1; i <= height; ++i) {
-		for(j = 1; j <= jcount; ++j) {
-			if(j >= height - (i - 1) && j <= height + (i - 1)) {
-				std::cout << "* ";
-			}
-			else {
-				std::cout << "  ";
-			}
-		}
-		std::cout << std::endl;
-	}
-}
-
-///drow filled diamond
-void drowDiamond() {
-	int width = 0, i = 0, j = 0;
-	std::cout << "Enter width: ";
-	giveInput(width, 3, 30);
-	checkWidth(i, width);
-	j = (width / 2) - 1;
-	for(; j >= 0; --j) {
-		printLineSpace(j);
-		i += 2;
-		printLineStar(i);
-		std::cout << std::endl;
-	}
-	for(j = 1; j < width / 2; ++j) {
-		printLineSpace(j);
-		i -= 2;
-		printLineStar(i);
-		std::cout << std::endl;
-	}
-	checkWidth(i, width);
-}
-
-///drow not filled diamond
-void drowNotFilledDiamond() {
-	int width = 0, i = 0, j = 0;
-	std::cout << "Enter width: ";
-	giveInput(width, 3, 30);
-	checkWidth(i, width);
-	j = (width / 2) - 1;
-	for(; j >= 0; --j) {
-		printLineSpace(j);
-		i += 2;
-		printLineStar(1);
-		printLineSpace(i-2);
-		printLineStar(1);
-		std::cout << std::endl;
-	}
-	for(j = 1; j < width / 2; ++j) {
-		printLineSpace(j);
-		i -= 2;
-		printLineStar(1);
-		printLineSpace(i-2);
-		printLineStar(1);
-		std::cout << std::endl;
-	}
-	checkWidth(i, width);
-
-}
-
-void checkWidth(int &i, int &width) {
-	if(1 == width % 2) {
-		printLineSpace(width / 2);
-		std::cout << "* " << std::endl; ///if width is even print * and row set 1
-		i = 1;
-	}
-}
-
 void giveInput(int &input, int from, int to) {
 	while(true) {
 		std::cin >> input;
@@ -135,14 +26,108 @@ void giveInput(int &input, int from, int to) {
 	}
 }
 
-void printLineStar(int count) {   ///print count stars
+void printLineStar(const int &count) {   ///print count stars
 	for (int i = 0; i < count; ++i) {
 		std::cout << "* ";
 	}
 }
 
-void printLineSpace(int count) {  ///print count spaces
+void printLineSpace(const int &count) {  ///print count spaces
 	for (int i = 0; i < count; ++i) {
 		std::cout << "  ";
 	}
+}
+
+void checkWidth(int &i, const int &width) {
+	if(1 == (width % 2)) {
+		printLineSpace(width / 2);
+		std::cout << "* " << std::endl; ///if width is even print * and row set 1
+		i = 1;
+	}
+}
+
+///drow triangle by width
+void drawTriangleWidth() {
+	int width = 0;
+       	int i = 0, j = 0;
+	std::cout << "Enter width of base: ";
+	giveInput(width, 3, 30);
+	checkWidth(i, width);
+	j = (width/2)-1;
+	for(; j >= 0; --j) {
+		printLineSpace(j);
+		i += 2;
+		printLineStar(i);
+		std::cout << std::endl;
+	}	
+}
+
+///drow triangle by height
+void drawTriangleHeight() {
+	int height = 0;
+       	int i = 0, j = 0;
+	std::cout << "Enter height of triangle: ";
+	giveInput(height, 2, 30);
+	int jcount = (2 * height)-1;
+	for(i = 1; i <= height; ++i) {
+		for(j = 1; j <= jcount; ++j) {
+			if(j >= height - (i - 1) && j <= height + (i - 1)) {
+				std::cout << "* ";
+			}
+			else {
+				std::cout << "  ";
+			}
+		}
+		std::cout << std::endl;
+	}
+}
+
+///drow filled diamond
+void drawDiamond() {
+	int width = 0;
+       	int i = 0, j = 0;
+	std::cout << "Enter width: ";
+	giveInput(width, 3, 30);
+	checkWidth(i, width);
+	j = (width / 2) - 1;
+	for(; j >= 0; --j) {
+		printLineSpace(j);
+		i += 2;
+		printLineStar(i);
+		std::cout << std::endl;
+	}
+	for(j = 1; j < width / 2; ++j) {
+		printLineSpace(j);
+		i -= 2;
+		printLineStar(i);
+		std::cout << std::endl;
+	}
+	checkWidth(i, width);
+}
+
+///drow not filled diamond
+void drawNotFilledDiamond() {
+	int width = 0;
+       	int i = 0, j = 0;
+	std::cout << "Enter width: ";
+	giveInput(width, 3, 30);
+	checkWidth(i, width);
+	j = (width / 2) - 1;
+	for(; j >= 0; --j) {
+		printLineSpace(j);
+		i += 2;
+		printLineStar(1);
+		printLineSpace(i-2);
+		printLineStar(1);
+		std::cout << std::endl;
+	}
+	for(j = 1; j < width / 2; ++j) {
+		printLineSpace(j);
+		i -= 2;
+		printLineStar(1);
+		printLineSpace(i-2);
+		printLineStar(1);
+		std::cout << std::endl;
+	}
+	checkWidth(i, width);
 }
