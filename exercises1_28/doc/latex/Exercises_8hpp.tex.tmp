@@ -1,0 +1,60 @@
+\hypertarget{Exercises_8hpp}{}\section{Exercises.\+hpp File Reference}
+\label{Exercises_8hpp}\index{Exercises.\+hpp@{Exercises.\+hpp}}
+
+
+Prototypes of functions for exercises.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Exercises_8hpp_a8ef7288f3778aad35b3e4829945aa30c}\label{Exercises_8hpp_a8ef7288f3778aad35b3e4829945aa30c}} 
+void \hyperlink{Exercises_8hpp_a8ef7288f3778aad35b3e4829945aa30c}{arithmetic\+Oper} ()
+\begin{DoxyCompactList}\small\item\em take arithmetic operators and do it \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Exercises_8hpp_a017868d5759b33c18b65ab4d45a488a8}\label{Exercises_8hpp_a017868d5759b33c18b65ab4d45a488a8}} 
+void \hyperlink{Exercises_8hpp_a017868d5759b33c18b65ab4d45a488a8}{reverse\+The\+Number} ()
+\begin{DoxyCompactList}\small\item\em take number and revese it \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Exercises_8hpp_a2090203cb4b887ad8f4a31abf73eace0}\label{Exercises_8hpp_a2090203cb4b887ad8f4a31abf73eace0}} 
+void \hyperlink{Exercises_8hpp_a2090203cb4b887ad8f4a31abf73eace0}{guess\+The\+Number} ()
+\begin{DoxyCompactList}\small\item\em Pc guess your number. \end{DoxyCompactList}\item 
+void \hyperlink{Exercises_8hpp_a957b4a07a0af694ece95930222172a11}{give\+Input} (int \&input, int from, int to)
+\begin{DoxyCompactList}\small\item\em give valid input from user \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Prototypes of functions for exercises. 
+
+\begin{DoxyAuthor}{Author}
+Razmik Martirosyan 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Exercises_8hpp_a957b4a07a0af694ece95930222172a11}\label{Exercises_8hpp_a957b4a07a0af694ece95930222172a11}} 
+\index{Exercises.\+hpp@{Exercises.\+hpp}!give\+Input@{give\+Input}}
+\index{give\+Input@{give\+Input}!Exercises.\+hpp@{Exercises.\+hpp}}
+\subsubsection{\texorpdfstring{give\+Input()}{giveInput()}}
+{\footnotesize\ttfamily void give\+Input (\begin{DoxyParamCaption}\item[{int \&}]{input,  }\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption})}
+
+
+
+give valid input from user 
+
+give valid input from user
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&input} & -\/ reference to input number \\
+\hline
+{\em from,to} & -\/ range for valid input \\
+\hline
+\end{DoxyParams}
+catch fails
+
+exit when customer type -\/1
+
+validate input range
+
+if all is okay 

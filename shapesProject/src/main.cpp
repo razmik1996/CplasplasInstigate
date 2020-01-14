@@ -9,8 +9,9 @@
 
 /**
 @brief Function for printing menu
- */
+*/
 void printmenu();
+
 /**
 @brief Function for switch block
 @param switchNumber - variable for switching
