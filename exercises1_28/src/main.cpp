@@ -18,15 +18,6 @@ void printMenu();
 */
 void switchCase(int &switchNumber);
 
-int main() {
-	while(true) {
-		int switchNumber = 0;
-		printMenu();
-		switchCase(switchNumber);
-	}
-	return 0;
-}
-
 void printMenu() {
 	std::cout << "Select exercises number" << std::endl;
 	std::cout << " 1 - for exercises 1" << std::endl;
@@ -54,3 +45,13 @@ void switchCase(int &switchNumber) {
 			std::cout << "Invalid number please set 1, 5 or 14: ";
 	}
 }
+
+int main() {
+	while(true) {
+		int switchNumber = 0;
+		printMenu();
+		switchCase(switchNumber);
+	}
+	return 0;
+}
+

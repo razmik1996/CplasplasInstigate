@@ -1,10 +1,11 @@
+PROGNAME := "exercises"
 SOURCESWITHMAIN := $(wildcard src/*.cpp)
 SOURCES := $(patsubst main.cpp, , $(SOURCESWITHMAIN))
 OBJECTS := $(patsubst src/%.cpp, obj/%.o, $(SOURCES))
 DEPENDS := $(patsubst src/%.cpp, obj/%.dep, $(SOURCESWITHMAIN))
 
 bin/program: ./bin lib/libStat.a src/main.cpp
-	@g++ src/main.cpp -L lib -l Stat -o bin/program
+	@g++ src/main.cpp -L lib -l Stat -o bin/$(PROGNAME)
 	@echo "Succesfully..."
 ./bin:
 	@mkdir -p bin

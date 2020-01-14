@@ -11,7 +11,7 @@ void giveInput(int &input, int from, int to) {
 				  << from << " to " << to << ": ";
 			continue;
 		}
-		if(input == -1) {               ///exit when customer type -1
+		if(-1 == input) {               ///exit when customer type -1
 			std::cout << "Good Bye!!!" << std::endl;
 			exit(0);
 		}
