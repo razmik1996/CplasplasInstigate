@@ -5,21 +5,6 @@
 */
 
 /**
-@brief take arithmetic operators and do it
-*/
-void arithmeticOper();
-
-/**
-@brief take number and revese it
-*/
-void reverseTheNumber();
-
-/**
-@brief Pc guess your number
-*/
-void guessTheNumber();
-
-/**
 @brief give valid input from user
 */
 void giveInput(int &input, int from, int to);
@@ -53,3 +38,64 @@ void takeUserInput(std::string &userInput);
 */
 void minMaxChanger(std::string &userInput, int &min, int &max, int &number);
 
+/**
+@brief print all the elements from an array
+@param &array - reference to first element from array
+@param size - size of array
+*/
+void printArray(const int &array, const int &size);
+
+/**
+@brief write to array
+@param &array - reference to first element from array
+@param size - size of array
+*/
+void writeArray(int &array, const int &size);
+
+/**
+@brief take arithmetic operators and do it
+*/
+void arithmeticOper();
+
+/**
+@brief take number and revese it
+*/
+void reverseTheNumber();
+
+/**
+@brief Pc guess your number
+*/
+void guessTheNumber();
+
+/**
+@brief find from array min and max elements and print it
+@param *array - const reference to array
+@param &size - const reference to size
+@return int * - pointer to minMax array (first element is min second max)
+*/
+int * minAndMax(const int *array, const int &size);
+
+/**
+@brief function for calculating how many times each of numbers have been entered 
+*/
+void ocurNumbers();
+
+/**
+@brief from decimal to binary
+*/
+std::string decToBin(int &decimal);
+
+/**
+@brief from binary to decimal
+*/
+int binToDec(std::string &binary);
+
+/**
+@brief Sum of all elements from array 
+*/
+int sumOfArray(const int *array, const int &size);
+
+/**
+@brief Sort array by using quickSort()
+*/
+void sortArray(int &array, const int &size);

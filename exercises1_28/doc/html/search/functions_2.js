@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['printmenu',['printMenu',['../main_8cpp.html#ab13e858612c64eeef73aff1d8a03945e',1,'main.cpp']]]
+  ['count',['count',['../Exercises_8hpp.html#aaff013486a0e36ffc8a51c929b8ba7dd',1,'Exercises.cpp']]]
 ];

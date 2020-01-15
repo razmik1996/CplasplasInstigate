@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
   ['minandmax',['minAndMax',['../Exercises_8hpp.html#a98e1dc230696a05071cd9d06f3d55789',1,'Exercises.cpp']]],
   ['minandmaxminiprogram',['minAndMaxMiniProgram',['../main_8cpp.html#a4d4827835090eff1c99a43ec8367b9c3',1,'main.cpp']]],
   ['minmaxchanger',['minMaxChanger',['../Exercises_8hpp.html#a7b5edbf26f4b0a5f0e2dc3d5f18daf00',1,'Exercises.cpp']]]

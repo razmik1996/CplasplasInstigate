@@ -89,6 +89,37 @@ void giveInput(int &input, int from, int to) {
 	}
 }
 
+void printArray(const int &array, const int &size) {
+	
+}
+
+void writeArray(int &array, const int &size) {
+	
+}
+
+int sumOfArray(const int *array, const int &size) {
+	int sum = 0;
+	for(int i = 0; i < size; ++i) {
+		sum += array[i];
+	}
+	return sum;
+}
+
+int * minAndMax(const int *array, const int &size) {
+	static int minMax[2] = {0};    /// first element is minimum second maximum
+	minMax[0] = array[0];
+	minMax[1] = array[0];
+	for(int i = 0; i < size; ++i) {
+		if(array[i] < minMax[0]) {
+			minMax[0] = array[i];
+		}
+		if(array[i] > minMax[1]) {
+			minMax[1] = array[i];
+		}
+	}
+	return minMax;
+}
+
 void arithmeticOper() {
 	int number1 = 0;
 	int number2 = 0;
