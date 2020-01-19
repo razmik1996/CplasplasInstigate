@@ -1,0 +1,174 @@
+\hypertarget{Exercises_8hpp}{}\section{src/\+Exercises.hpp File Reference}
+\label{Exercises_8hpp}\index{src/\+Exercises.\+hpp@{src/\+Exercises.\+hpp}}
+
+
+Prototypes of functions for exercises.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \hyperlink{Exercises_8hpp_a98e1dc230696a05071cd9d06f3d55789}{min\+And\+Max} (const int $\ast$array, const int \&size)
+\begin{DoxyCompactList}\small\item\em find from array min and max elements and print it \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Exercises_8hpp_afc817b5f165c164ceb1ef0617f005681}\label{Exercises_8hpp_afc817b5f165c164ceb1ef0617f005681}} 
+void \hyperlink{Exercises_8hpp_afc817b5f165c164ceb1ef0617f005681}{ocur\+Numbers} ()
+\begin{DoxyCompactList}\small\item\em function for calculating how many times each of numbers have been entered \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Exercises_8hpp_a222561aff8d6287a3040640a07c54cdb}\label{Exercises_8hpp_a222561aff8d6287a3040640a07c54cdb}} 
+std\+::string \hyperlink{Exercises_8hpp_a222561aff8d6287a3040640a07c54cdb}{dec\+To\+Bin} (int \&decimal)
+\begin{DoxyCompactList}\small\item\em from decimal to binary \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Exercises_8hpp_a335ab4cdb1e70af3cab0af04858ca29b}\label{Exercises_8hpp_a335ab4cdb1e70af3cab0af04858ca29b}} 
+int \hyperlink{Exercises_8hpp_a335ab4cdb1e70af3cab0af04858ca29b}{bin\+To\+Dec} (std\+::string \&binary)
+\begin{DoxyCompactList}\small\item\em from binary to decimal \end{DoxyCompactList}\item 
+int \hyperlink{Exercises_8hpp_afff38d8eb294cb4bd31937946130ee9d}{sum\+Of\+Array} (const int $\ast$array, const int \&size)
+\begin{DoxyCompactList}\small\item\em Sum of all elements from array. \end{DoxyCompactList}\item 
+void \hyperlink{Exercises_8hpp_a17655118e82b044aedd720f2ef0ecf4a}{sort\+Array} (int $\ast$array, const int \&size)
+\begin{DoxyCompactList}\small\item\em Sort array by using \hyperlink{Exercises_8hpp_a29e9e5a00340d9c768a388fecf8c3b36}{quick\+Sort()} \end{DoxyCompactList}\item 
+void \hyperlink{Exercises_8hpp_a6a0ed6dd868f5680689f03d9c96ebc1c}{print\+Array\+Count} (const int $\ast$array, int from, int to)
+\begin{DoxyCompactList}\small\item\em pirnt from to elements from an array \end{DoxyCompactList}\item 
+void \hyperlink{Exercises_8hpp_a29e9e5a00340d9c768a388fecf8c3b36}{quick\+Sort} (int $\ast$array, int low, int high)
+\begin{DoxyCompactList}\small\item\em quick\+Sort implementation \end{DoxyCompactList}\item 
+void \hyperlink{Exercises_8hpp_a23afa7b8799c4eb3d8e5cc1cc794969b}{swap} (int $\ast$num1, int $\ast$num2)
+\begin{DoxyCompactList}\small\item\em swap two integers \end{DoxyCompactList}\item 
+int \hyperlink{Exercises_8hpp_a51f26bca2b7833de7f23daed58171d25}{partition} (int $\ast$array, int low, int high)
+\begin{DoxyCompactList}\small\item\em split array \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Prototypes of functions for exercises. 
+
+\begin{DoxyAuthor}{Author}
+Razmik Martirosyan 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Exercises_8hpp_a98e1dc230696a05071cd9d06f3d55789}\label{Exercises_8hpp_a98e1dc230696a05071cd9d06f3d55789}} 
+\index{Exercises.\+hpp@{Exercises.\+hpp}!min\+And\+Max@{min\+And\+Max}}
+\index{min\+And\+Max@{min\+And\+Max}!Exercises.\+hpp@{Exercises.\+hpp}}
+\subsubsection{\texorpdfstring{min\+And\+Max()}{minAndMax()}}
+{\footnotesize\ttfamily int$\ast$ min\+And\+Max (\begin{DoxyParamCaption}\item[{const int $\ast$}]{array,  }\item[{const int \&}]{size }\end{DoxyParamCaption})}
+
+
+
+find from array min and max elements and print it 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$array} & -\/ const reference to array \\
+\hline
+{\em \&size} & -\/ const reference to size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int $\ast$ -\/ pointer to min\+Max array (first element is min second max) 
+\end{DoxyReturn}
+first element is minimum second maximum \mbox{\Hypertarget{Exercises_8hpp_a51f26bca2b7833de7f23daed58171d25}\label{Exercises_8hpp_a51f26bca2b7833de7f23daed58171d25}} 
+\index{Exercises.\+hpp@{Exercises.\+hpp}!partition@{partition}}
+\index{partition@{partition}!Exercises.\+hpp@{Exercises.\+hpp}}
+\subsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily int partition (\begin{DoxyParamCaption}\item[{int $\ast$}]{array,  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+
+
+split array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$array} & -\/ pointer to first element from array \\
+\hline
+{\em low} & -\/ from elemenet \\
+\hline
+{\em high} & -\/ to element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Exercises_8hpp_a6a0ed6dd868f5680689f03d9c96ebc1c}\label{Exercises_8hpp_a6a0ed6dd868f5680689f03d9c96ebc1c}} 
+\index{Exercises.\+hpp@{Exercises.\+hpp}!print\+Array\+Count@{print\+Array\+Count}}
+\index{print\+Array\+Count@{print\+Array\+Count}!Exercises.\+hpp@{Exercises.\+hpp}}
+\subsubsection{\texorpdfstring{print\+Array\+Count()}{printArrayCount()}}
+{\footnotesize\ttfamily void print\+Array\+Count (\begin{DoxyParamCaption}\item[{const int $\ast$}]{array,  }\item[{int}]{from,  }\item[{int}]{to }\end{DoxyParamCaption})}
+
+
+
+pirnt from to elements from an array 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$array} & -\/ pointer to first element from array \\
+\hline
+{\em from} & -\/ from elemenet \\
+\hline
+{\em to} & -\/ to element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Exercises_8hpp_a29e9e5a00340d9c768a388fecf8c3b36}\label{Exercises_8hpp_a29e9e5a00340d9c768a388fecf8c3b36}} 
+\index{Exercises.\+hpp@{Exercises.\+hpp}!quick\+Sort@{quick\+Sort}}
+\index{quick\+Sort@{quick\+Sort}!Exercises.\+hpp@{Exercises.\+hpp}}
+\subsubsection{\texorpdfstring{quick\+Sort()}{quickSort()}}
+{\footnotesize\ttfamily void quick\+Sort (\begin{DoxyParamCaption}\item[{int $\ast$}]{array,  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+
+
+quick\+Sort implementation 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$array} & -\/ pointer to first element from array \\
+\hline
+{\em low} & -\/ from elemenet \\
+\hline
+{\em high} & -\/ to element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Exercises_8hpp_a17655118e82b044aedd720f2ef0ecf4a}\label{Exercises_8hpp_a17655118e82b044aedd720f2ef0ecf4a}} 
+\index{Exercises.\+hpp@{Exercises.\+hpp}!sort\+Array@{sort\+Array}}
+\index{sort\+Array@{sort\+Array}!Exercises.\+hpp@{Exercises.\+hpp}}
+\subsubsection{\texorpdfstring{sort\+Array()}{sortArray()}}
+{\footnotesize\ttfamily void sort\+Array (\begin{DoxyParamCaption}\item[{int $\ast$}]{array,  }\item[{const int \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Sort array by using \hyperlink{Exercises_8hpp_a29e9e5a00340d9c768a388fecf8c3b36}{quick\+Sort()} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$array} & -\/ pointer to first element from array \\
+\hline
+{\em size} & -\/ reference to size of array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Exercises_8hpp_afff38d8eb294cb4bd31937946130ee9d}\label{Exercises_8hpp_afff38d8eb294cb4bd31937946130ee9d}} 
+\index{Exercises.\+hpp@{Exercises.\+hpp}!sum\+Of\+Array@{sum\+Of\+Array}}
+\index{sum\+Of\+Array@{sum\+Of\+Array}!Exercises.\+hpp@{Exercises.\+hpp}}
+\subsubsection{\texorpdfstring{sum\+Of\+Array()}{sumOfArray()}}
+{\footnotesize\ttfamily int sum\+Of\+Array (\begin{DoxyParamCaption}\item[{const int $\ast$}]{array,  }\item[{const int \&}]{size }\end{DoxyParamCaption})}
+
+
+
+Sum of all elements from array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em $\ast$array} & -\/ pointer to first element from array \\
+\hline
+{\em size} & -\/ reference to size of array \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Exercises_8hpp_a23afa7b8799c4eb3d8e5cc1cc794969b}\label{Exercises_8hpp_a23afa7b8799c4eb3d8e5cc1cc794969b}} 
+\index{Exercises.\+hpp@{Exercises.\+hpp}!swap@{swap}}
+\index{swap@{swap}!Exercises.\+hpp@{Exercises.\+hpp}}
+\subsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{int $\ast$}]{num1,  }\item[{int $\ast$}]{num2 }\end{DoxyParamCaption})}
+
+
+
+swap two integers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num1} & -\/ first integer \\
+\hline
+{\em num2} & -\/ second integer \\
+\hline
+\end{DoxyParams}
