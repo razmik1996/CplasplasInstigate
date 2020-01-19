@@ -1,3 +1,6 @@
+#ifndef POSTFIXPREFIX_HPP
+#define POSTFIXPREFIX_HPP
+
 /**
 @file postfixPrefix.hpp
 @brief prototypes of postfix and prefix ++
@@ -15,3 +18,5 @@ int postfixPlasPlas(int *number);
 @param *number - pointer to number for plas plas
 */
 int prefixPlasPlas(int *number);
+
+#endif ///POSTFIXPREFIX_HPP

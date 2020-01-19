@@ -11,7 +11,11 @@ This graph shows which files directly or indirectly include this file\+:
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{swap_8hpp_ac005eaa05ec80dbf1a0984d3d4fa80a8}{swap} (void $\ast$a, void $\ast$b, size\+\_\+t size)
-\begin{DoxyCompactList}\small\item\em function for swaping two values by using byte copying \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em function for swaping two values by using byte copying \end{DoxyCompactList}\item 
+void \hyperlink{swap_8hpp_a78513d8d528927a96295e76a5c3b5def}{swap\+Classic} (int \&a, int \&b)
+\begin{DoxyCompactList}\small\item\em function for swaping two values by using third element \end{DoxyCompactList}\item 
+void \hyperlink{swap_8hpp_ab527efaaf1b16369248f409ffc13575c}{swap\+Xor} (int \&a, int \&b)
+\begin{DoxyCompactList}\small\item\em function for swaping two values by using X\+OR \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -39,6 +43,41 @@ function for swaping two values by using byte copying
 \hline
 {\em void} & $\ast$b -\/ void pointer to second element \\
 \hline
-{\em size\+\_\+t} & size -\/ sizeof element \\
+{\em size\+\_\+t} & size -\/ sizeof element\\
 \hline
 \end{DoxyParams}
+function for swaping two values by using byte copying \mbox{\Hypertarget{swap_8hpp_a78513d8d528927a96295e76a5c3b5def}\label{swap_8hpp_a78513d8d528927a96295e76a5c3b5def}} 
+\index{swap.\+hpp@{swap.\+hpp}!swap\+Classic@{swap\+Classic}}
+\index{swap\+Classic@{swap\+Classic}!swap.\+hpp@{swap.\+hpp}}
+\subsubsection{\texorpdfstring{swap\+Classic()}{swapClassic()}}
+{\footnotesize\ttfamily void swap\+Classic (\begin{DoxyParamCaption}\item[{int \&}]{a,  }\item[{int \&}]{b }\end{DoxyParamCaption})}
+
+
+
+function for swaping two values by using third element 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & \&a -\/ reference to first element \\
+\hline
+{\em int} & \&b -\/ reference to second element\\
+\hline
+\end{DoxyParams}
+function for swaping two values by using third element \mbox{\Hypertarget{swap_8hpp_ab527efaaf1b16369248f409ffc13575c}\label{swap_8hpp_ab527efaaf1b16369248f409ffc13575c}} 
+\index{swap.\+hpp@{swap.\+hpp}!swap\+Xor@{swap\+Xor}}
+\index{swap\+Xor@{swap\+Xor}!swap.\+hpp@{swap.\+hpp}}
+\subsubsection{\texorpdfstring{swap\+Xor()}{swapXor()}}
+{\footnotesize\ttfamily void swap\+Xor (\begin{DoxyParamCaption}\item[{int \&}]{a,  }\item[{int \&}]{b }\end{DoxyParamCaption})}
+
+
+
+function for swaping two values by using X\+OR 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & \&a -\/ reference to first element \\
+\hline
+{\em int} & \&b -\/ reference to second element\\
+\hline
+\end{DoxyParams}
+function for swaping two values by using X\+OR 

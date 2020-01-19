@@ -1,6 +1,7 @@
 #include <iostream>
 #include "postfixPrefix.hpp"
 #include "swap.hpp"
+#include "utils.hpp"
 
 /**
 @file main.cpp
@@ -38,7 +39,7 @@ void printMenu() {
 }
 
 void switchCase(int &switchNumber) {
-	std::cin >> switchNumber;
+	giveInput(switchNumber, 1, 2);
 	switch(switchNumber) {
 		case 1:
 			postfixPrefixMiniProgram();
@@ -61,13 +62,21 @@ void swapMiniProgram() {
 	std::cout << "Before swap x = " << x << " y = " << y << std::endl;
 	swap(&x, &y, sizeof(x));
 	std::cout << "After swap x = " << x;
-	std::cout << " y = " << y << std::endl;
+	std::cout << " y = " << y << std::endl << std::endl;
+	std::cout << "Before swap with classic way x = " << x << " y = " << y << std::endl;
+	swapClassic(x, y);
+	std::cout << "After swap  with classic way x = " << x;
+	std::cout << " y = " << y << std::endl << std::endl;
+	std::cout << "Before swap with XOR x = " << x << " y = " << y << std::endl;
+	swapXor(x, y);
+	std::cout << "After swap with XOR x = " << x;
+	std::cout << " y = " << y << std::endl << std::endl;
 	long double a = 55421.5454545;
 	long double b = 64842.5471263;
 	std::cout << "Before swap a = " << a << " b = " << b << std::endl;
 	swap(&a, &b, sizeof(a));
 	std::cout << "After swap a = " << a;
-	std::cout << " b = " << b << std::endl;
+	std::cout << " b = " << b << std::endl << std::endl;
 }
 
 void postfixPrefixMiniProgram() {

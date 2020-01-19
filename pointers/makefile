@@ -1,12 +1,19 @@
-PROGNAME := "exercises"
+PROGNAME := "incrementAndSwap"
 SOURCESWITHMAIN := $(wildcard src/*.cpp)
+HEADERS := $(wildcard src/*.hpp)
+HEADERS := $(patsubst src/%.hpp, inc/%.hpp, $(HEADERS))
 SOURCES := $(patsubst main.cpp, , $(SOURCESWITHMAIN))
 OBJECTS := $(patsubst src/%.cpp, obj/%.o, $(SOURCES))
 DEPENDS := $(patsubst src/%.cpp, obj/%.dep, $(SOURCESWITHMAIN))
 
-bin/program: ./bin lib/libStat.a src/main.cpp
-	@g++ src/main.cpp -L lib -l Stat -o bin/$(PROGNAME)
+bin/program: ./bin lib/libStat.a src/main.cpp $(HEADERS)
+	@g++ src/main.cpp -L lib -l Stat -o bin/$(PROGNAME) -I /inc
 	@echo "Succesfully..."
+inc/%.hpp: src/%.hpp ./inc
+	@ln -f $< $@
+./inc:
+	@echo "inc folder created..."
+	@mkdir -p inc
 ./bin:
 	@mkdir -p bin
 	@echo "bin folder created..."
@@ -19,6 +26,7 @@ lib/libStat.a: ./lib $(OBJECTS)
 obj/%.o: src/%.cpp
 	@mkdir -p obj
 	@g++ -c $< -o $@
+
 obj/%.dep: src/%.cpp
 	@mkdir -p obj
 	@g++ -MM $< -MT "$@ $(patsubst %.dep, %.o, $@)" -o $@
@@ -26,7 +34,7 @@ obj/%.dep: src/%.cpp
 
 .PHONY: clean
 clean:
-	@rm -rf bin/ lib/ obj/
+	@rm -rf bin/ lib/ obj/ inc/
 	@echo "Cleaning..."
 
 .PHONY: push

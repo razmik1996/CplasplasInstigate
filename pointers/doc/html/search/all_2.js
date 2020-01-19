@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['swap',['swap',['../swap_8hpp.html#ac005eaa05ec80dbf1a0984d3d4fa80a8',1,'swap.cpp']]],
-  ['swap_2ehpp',['swap.hpp',['../swap_8hpp.html',1,'']]],
-  ['swapminiprogram',['swapMiniProgram',['../main_8cpp.html#a5551e48698e417563057cfbbb79dae4f',1,'main.cpp']]],
-  ['switchcase',['switchCase',['../main_8cpp.html#a00b322e4756d809fd3776f34849df116',1,'main.cpp']]]
+  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]]
 ];

@@ -9,4 +9,6 @@ digraph "src/main.cpp"
   Node2 [label="postfixPrefix.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$postfixPrefix_8hpp.html",tooltip="prototypes of postfix and prefix ++ "];
   Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
   Node3 [label="swap.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$swap_8hpp.html",tooltip="prototypes for swaping function "];
+  Node0 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="utils.hpp",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$utils_8hpp.html",tooltip="utilites for our programs "];
 }

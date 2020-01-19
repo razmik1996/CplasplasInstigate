@@ -1,0 +1,12 @@
+/*! \mainpage DOC for incrementAndSwap
+ *
+ * \section Introduction
+ *
+ * Solution for exercises postfix and prefix increment and swap function.
+ *
+ * 
+ * \section Installation
+ *
+ * step 1: type make\n
+ * step 2: run program ./bin/incrementAndSwap
+ */
