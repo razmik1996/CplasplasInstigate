@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['printmenu',['printmenu',['../main_8cpp.html#a6e884a54071880be1ad84f39be7e11af',1,'main.cpp']]]
+  ['inputswitchnumber',['inputSwitchNumber',['../main_8cpp.html#a7824051c58cf04f7d120223cfb744884',1,'main.cpp']]]
 ];

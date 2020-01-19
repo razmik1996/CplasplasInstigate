@@ -1,30 +1,5 @@
 #include <iostream>
-#include <limits>
-
-void giveInput(int &input, int from, int to) {
-	while(true) {
-		std::cin >> input;
-		if(std::cin.fail()) {           ///catch fails
-			std::cin.clear();
-			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-			std::cout << "You have entered wrong input enter number from " 
-				  << from << " to " << to << ": ";
-			continue;
-		}
-		if(-1 == input) {               ///exit when customer type -1
-			std::cout << "Good Bye!!!" << std::endl;
-			exit(0);
-		}
-		if(input < from || input > to) { ///validate input range
-			std::cout << "Invalid input please enter number from " 
-				  << from << " to " << to << ": ";
-			continue;
-		}	
-		if(!std::cin.fail()) {   ///if all is okay
-			break;
-		}
-	}
-}
+#include "utils.hpp"
 
 void printLineStar(const int &count) {   ///print count stars
 	for (int i = 0; i < count; ++i) {
@@ -46,6 +21,16 @@ void checkWidth(int &i, const int &width) {
 	}
 }
 
+///triangle drowing loop
+void drawTriangle(int &j, int &i) {
+	for(; j >= 0; --j) {
+		printLineSpace(j);
+		i += 2;
+		printLineStar(i);
+		std::cout << std::endl;
+	}	
+}
+
 ///drow triangle by width
 void drawTriangleWidth() {
 	int width = 0;
@@ -54,12 +39,7 @@ void drawTriangleWidth() {
 	giveInput(width, 3, 30);
 	checkWidth(i, width);
 	j = (width/2)-1;
-	for(; j >= 0; --j) {
-		printLineSpace(j);
-		i += 2;
-		printLineStar(i);
-		std::cout << std::endl;
-	}	
+	drawTriangle(j, i);
 }
 
 ///drow triangle by height
@@ -90,12 +70,7 @@ void drawDiamond() {
 	giveInput(width, 3, 30);
 	checkWidth(i, width);
 	j = (width / 2) - 1;
-	for(; j >= 0; --j) {
-		printLineSpace(j);
-		i += 2;
-		printLineStar(i);
-		std::cout << std::endl;
-	}
+	drawTriangle(j, i);
 	for(j = 1; j < width / 2; ++j) {
 		printLineSpace(j);
 		i -= 2;

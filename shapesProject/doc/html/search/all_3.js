@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]]
+  ['inputswitchnumber',['inputSwitchNumber',['../main_8cpp.html#a7824051c58cf04f7d120223cfb744884',1,'main.cpp']]]
 ];

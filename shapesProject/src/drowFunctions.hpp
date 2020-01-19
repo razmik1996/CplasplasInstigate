@@ -1,3 +1,6 @@
+#ifndef DROWFUNCTIONS_HPP
+#define DROWFUNCTIONS_HPP
+
 /**
 @file drowFunctions.hpp
 @brief Prototypes of functions for drowing
@@ -25,11 +28,11 @@ void drawDiamond();
 void drawNotFilledDiamond();
 
 /**
-@brief Take valid input from customer
-@param &inp - reference to varriable for input
-@param f,l - input range
+@brief Draw triangle loop
+@param int &j = reference to columns
+@param int &i = reference to rows 
 */
-void giveInput(int &inp, int f, int l);
+void drawTriangle(int &j, int &i);
 
 /**
 @brief print count amount of stars
@@ -50,3 +53,4 @@ void printLineSpace(const int &count);
 */
 void checkWidth(int &row, const int &width);
 
+#endif //DROWFUNCTIONS_HPP

@@ -1,5 +1,5 @@
-\hypertarget{drowFunctions_8hpp}{}\section{drow\+Functions.\+hpp File Reference}
-\label{drowFunctions_8hpp}\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\hypertarget{drowFunctions_8hpp}{}\section{src/drow\+Functions.hpp File Reference}
+\label{drowFunctions_8hpp}\index{src/drow\+Functions.\+hpp@{src/drow\+Functions.\+hpp}}
 
 
 Prototypes of functions for drowing.  
@@ -10,16 +10,22 @@ This graph shows which files directly or indirectly include this file\+:
 \subsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{drowFunctions_8hpp_a81a802710df33ba479de917f16f0a0bd}{drow\+Triangle\+Width} ()
+void \hyperlink{drowFunctions_8hpp_a3fb5dcdcfb948ab538b15fd4420d0c81}{draw\+Triangle\+Width} ()
 \begin{DoxyCompactList}\small\item\em Draw triangle by using width of basis. \end{DoxyCompactList}\item 
-void \hyperlink{drowFunctions_8hpp_a89574d02d67a9b9fe95e8e20c0d2b31d}{drow\+Triangle\+Height} ()
+void \hyperlink{drowFunctions_8hpp_a2938c3d6646a75e6076b8b261087680b}{draw\+Triangle\+Height} ()
 \begin{DoxyCompactList}\small\item\em Draw triangle by using height. \end{DoxyCompactList}\item 
-void \hyperlink{drowFunctions_8hpp_a6b947833698c96fa6b687469c8da26bd}{drow\+Diamond} ()
+void \hyperlink{drowFunctions_8hpp_a045bfd640c21f27cd9043ce7bec02bc8}{draw\+Diamond} ()
 \begin{DoxyCompactList}\small\item\em Draw filled diamond. \end{DoxyCompactList}\item 
-void \hyperlink{drowFunctions_8hpp_a3b94792d8715e6ed88255e52666d8a73}{drow\+Not\+Filled\+Diamond} ()
+void \hyperlink{drowFunctions_8hpp_ae4f596804c9bcba1d65b189d52c118b6}{draw\+Not\+Filled\+Diamond} ()
 \begin{DoxyCompactList}\small\item\em Draw not filled diamond. \end{DoxyCompactList}\item 
-void \hyperlink{drowFunctions_8hpp_ad759e54fade96f157e12dcb170831bcf}{give\+Input} (int \&inp, int f, int l)
-\begin{DoxyCompactList}\small\item\em Take valid input from customer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{drowFunctions_8hpp_a299ff7b25e651e82d37db337e9d9a527}{draw\+Triangle} (int \&j, int \&i)
+\begin{DoxyCompactList}\small\item\em Draw triangle loop. \end{DoxyCompactList}\item 
+void \hyperlink{drowFunctions_8hpp_a785a9ce0219b99b3fb1db488168bf913}{print\+Line\+Star} (const int \&count)
+\begin{DoxyCompactList}\small\item\em print count amount of stars \end{DoxyCompactList}\item 
+void \hyperlink{drowFunctions_8hpp_a4fbb3ed96fd9a604de29492d074f6af0}{print\+Line\+Space} (const int \&count)
+\begin{DoxyCompactList}\small\item\em print count amount of spaces \end{DoxyCompactList}\item 
+void \hyperlink{drowFunctions_8hpp_af3d900792cd06f68a58beddcbfbeec72}{check\+Width} (int \&row, const int \&width)
+\begin{DoxyCompactList}\small\item\em Check odd or even and when it\textquotesingle{}s odd print first $\ast$. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -31,69 +37,108 @@ Razmik Martirosyan
 
 
 \subsection{Function Documentation}
-\mbox{\Hypertarget{drowFunctions_8hpp_a6b947833698c96fa6b687469c8da26bd}\label{drowFunctions_8hpp_a6b947833698c96fa6b687469c8da26bd}} 
-\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!drow\+Diamond@{drow\+Diamond}}
-\index{drow\+Diamond@{drow\+Diamond}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
-\subsubsection{\texorpdfstring{drow\+Diamond()}{drowDiamond()}}
-{\footnotesize\ttfamily void drow\+Diamond (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{drowFunctions_8hpp_af3d900792cd06f68a58beddcbfbeec72}\label{drowFunctions_8hpp_af3d900792cd06f68a58beddcbfbeec72}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!check\+Width@{check\+Width}}
+\index{check\+Width@{check\+Width}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{check\+Width()}{checkWidth()}}
+{\footnotesize\ttfamily void check\+Width (\begin{DoxyParamCaption}\item[{int \&}]{row,  }\item[{const int \&}]{width }\end{DoxyParamCaption})}
+
+
+
+Check odd or even and when it\textquotesingle{}s odd print first $\ast$. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&row} & -\/ reference to rows for adding 1 to row \\
+\hline
+{\em \&width} & -\/ reference to width for checking \\
+\hline
+\end{DoxyParams}
+if width is even print $\ast$ and row set 1 \mbox{\Hypertarget{drowFunctions_8hpp_a045bfd640c21f27cd9043ce7bec02bc8}\label{drowFunctions_8hpp_a045bfd640c21f27cd9043ce7bec02bc8}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!draw\+Diamond@{draw\+Diamond}}
+\index{draw\+Diamond@{draw\+Diamond}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{draw\+Diamond()}{drawDiamond()}}
+{\footnotesize\ttfamily void draw\+Diamond (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Draw filled diamond. 
 
-Draw filled diamond. \mbox{\Hypertarget{drowFunctions_8hpp_a3b94792d8715e6ed88255e52666d8a73}\label{drowFunctions_8hpp_a3b94792d8715e6ed88255e52666d8a73}} 
-\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!drow\+Not\+Filled\+Diamond@{drow\+Not\+Filled\+Diamond}}
-\index{drow\+Not\+Filled\+Diamond@{drow\+Not\+Filled\+Diamond}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
-\subsubsection{\texorpdfstring{drow\+Not\+Filled\+Diamond()}{drowNotFilledDiamond()}}
-{\footnotesize\ttfamily void drow\+Not\+Filled\+Diamond (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Draw filled diamond. \mbox{\Hypertarget{drowFunctions_8hpp_ae4f596804c9bcba1d65b189d52c118b6}\label{drowFunctions_8hpp_ae4f596804c9bcba1d65b189d52c118b6}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!draw\+Not\+Filled\+Diamond@{draw\+Not\+Filled\+Diamond}}
+\index{draw\+Not\+Filled\+Diamond@{draw\+Not\+Filled\+Diamond}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{draw\+Not\+Filled\+Diamond()}{drawNotFilledDiamond()}}
+{\footnotesize\ttfamily void draw\+Not\+Filled\+Diamond (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Draw not filled diamond. 
 
-Draw not filled diamond. \mbox{\Hypertarget{drowFunctions_8hpp_a89574d02d67a9b9fe95e8e20c0d2b31d}\label{drowFunctions_8hpp_a89574d02d67a9b9fe95e8e20c0d2b31d}} 
-\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!drow\+Triangle\+Height@{drow\+Triangle\+Height}}
-\index{drow\+Triangle\+Height@{drow\+Triangle\+Height}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
-\subsubsection{\texorpdfstring{drow\+Triangle\+Height()}{drowTriangleHeight()}}
-{\footnotesize\ttfamily void drow\+Triangle\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Draw not filled diamond. \mbox{\Hypertarget{drowFunctions_8hpp_a299ff7b25e651e82d37db337e9d9a527}\label{drowFunctions_8hpp_a299ff7b25e651e82d37db337e9d9a527}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!draw\+Triangle@{draw\+Triangle}}
+\index{draw\+Triangle@{draw\+Triangle}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{draw\+Triangle()}{drawTriangle()}}
+{\footnotesize\ttfamily void draw\+Triangle (\begin{DoxyParamCaption}\item[{int \&}]{j,  }\item[{int \&}]{i }\end{DoxyParamCaption})}
+
+
+
+Draw triangle loop. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & \&j = reference to columns \\
+\hline
+{\em int} & \&i = reference to rows\\
+\hline
+\end{DoxyParams}
+Draw triangle loop. \mbox{\Hypertarget{drowFunctions_8hpp_a2938c3d6646a75e6076b8b261087680b}\label{drowFunctions_8hpp_a2938c3d6646a75e6076b8b261087680b}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!draw\+Triangle\+Height@{draw\+Triangle\+Height}}
+\index{draw\+Triangle\+Height@{draw\+Triangle\+Height}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{draw\+Triangle\+Height()}{drawTriangleHeight()}}
+{\footnotesize\ttfamily void draw\+Triangle\+Height (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Draw triangle by using height. 
 
-Draw triangle by using height. \mbox{\Hypertarget{drowFunctions_8hpp_a81a802710df33ba479de917f16f0a0bd}\label{drowFunctions_8hpp_a81a802710df33ba479de917f16f0a0bd}} 
-\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!drow\+Triangle\+Width@{drow\+Triangle\+Width}}
-\index{drow\+Triangle\+Width@{drow\+Triangle\+Width}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
-\subsubsection{\texorpdfstring{drow\+Triangle\+Width()}{drowTriangleWidth()}}
-{\footnotesize\ttfamily void drow\+Triangle\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+Draw triangle by using height. \mbox{\Hypertarget{drowFunctions_8hpp_a3fb5dcdcfb948ab538b15fd4420d0c81}\label{drowFunctions_8hpp_a3fb5dcdcfb948ab538b15fd4420d0c81}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!draw\+Triangle\+Width@{draw\+Triangle\+Width}}
+\index{draw\+Triangle\+Width@{draw\+Triangle\+Width}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{draw\+Triangle\+Width()}{drawTriangleWidth()}}
+{\footnotesize\ttfamily void draw\+Triangle\+Width (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Draw triangle by using width of basis. 
 
-Draw triangle by using width of basis.
-
-drow triangle by width \mbox{\Hypertarget{drowFunctions_8hpp_ad759e54fade96f157e12dcb170831bcf}\label{drowFunctions_8hpp_ad759e54fade96f157e12dcb170831bcf}} 
-\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!give\+Input@{give\+Input}}
-\index{give\+Input@{give\+Input}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
-\subsubsection{\texorpdfstring{give\+Input()}{giveInput()}}
-{\footnotesize\ttfamily void give\+Input (\begin{DoxyParamCaption}\item[{int \&}]{inp,  }\item[{int}]{f,  }\item[{int}]{l }\end{DoxyParamCaption})}
+Draw triangle by using width of basis. \mbox{\Hypertarget{drowFunctions_8hpp_a4fbb3ed96fd9a604de29492d074f6af0}\label{drowFunctions_8hpp_a4fbb3ed96fd9a604de29492d074f6af0}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!print\+Line\+Space@{print\+Line\+Space}}
+\index{print\+Line\+Space@{print\+Line\+Space}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{print\+Line\+Space()}{printLineSpace()}}
+{\footnotesize\ttfamily void print\+Line\+Space (\begin{DoxyParamCaption}\item[{const int \&}]{count }\end{DoxyParamCaption})}
 
 
 
-Take valid input from customer. 
+print count amount of spaces 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \&inp} & -\/ reference to varriable for input \\
-\hline
-{\em f,l} & -\/ input range \\
+{\em count} & -\/ amount of spaces \\
 \hline
 \end{DoxyParams}
-catch fails
+print count spaces \mbox{\Hypertarget{drowFunctions_8hpp_a785a9ce0219b99b3fb1db488168bf913}\label{drowFunctions_8hpp_a785a9ce0219b99b3fb1db488168bf913}} 
+\index{drow\+Functions.\+hpp@{drow\+Functions.\+hpp}!print\+Line\+Star@{print\+Line\+Star}}
+\index{print\+Line\+Star@{print\+Line\+Star}!drow\+Functions.\+hpp@{drow\+Functions.\+hpp}}
+\subsubsection{\texorpdfstring{print\+Line\+Star()}{printLineStar()}}
+{\footnotesize\ttfamily void print\+Line\+Star (\begin{DoxyParamCaption}\item[{const int \&}]{count }\end{DoxyParamCaption})}
 
-exit when customer type -\/1
 
-validate input range
 
-if all is okay 
+print count amount of stars 
+
+
+\begin{DoxyParams}{Parameters}
+{\em count} & -\/ amount of stars \\
+\hline
+\end{DoxyParams}
+print count stars 

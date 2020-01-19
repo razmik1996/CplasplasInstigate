@@ -1,0 +1,13 @@
+/*! \mainpage DOC for shapes program
+ *
+ * \section Introduction
+ *
+ * Program for drawing triangle by width and height, filled and not filled diamonds.
+ *
+ * \section Installation
+ *
+ * step 1: type make\n
+ * step 2: run program ./bin/shapes
+ *
+ * etc...
+ */
