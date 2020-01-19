@@ -1,0 +1,93 @@
+\hypertarget{Exercises_8hpp}{}\section{src/\+Exercises.hpp File Reference}
+\label{Exercises_8hpp}\index{src/\+Exercises.\+hpp@{src/\+Exercises.\+hpp}}
+
+
+Prototypes of functions for exercises.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{Exercises_8hpp_aaff013486a0e36ffc8a51c929b8ba7dd}{count} (int first, int second, char oper)
+\begin{DoxyCompactList}\small\item\em count first and second operands with oper operator \end{DoxyCompactList}\item 
+void \hyperlink{Exercises_8hpp_a855c9f169bd11754a6437522c0173391}{take\+User\+Input} (std\+::string \&user\+Input)
+\begin{DoxyCompactList}\small\item\em take from user low, high or correct answers \end{DoxyCompactList}\item 
+void \hyperlink{Exercises_8hpp_a7b5edbf26f4b0a5f0e2dc3d5f18daf00}{min\+Max\+Changer} (std\+::string \&user\+Input, int \&min, int \&max, int \&number)
+\begin{DoxyCompactList}\small\item\em change minimum and maximum by using user\+Input \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Exercises_8hpp_a8ef7288f3778aad35b3e4829945aa30c}\label{Exercises_8hpp_a8ef7288f3778aad35b3e4829945aa30c}} 
+void \hyperlink{Exercises_8hpp_a8ef7288f3778aad35b3e4829945aa30c}{arithmetic\+Oper} ()
+\begin{DoxyCompactList}\small\item\em take arithmetic operators and do it \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Exercises_8hpp_a017868d5759b33c18b65ab4d45a488a8}\label{Exercises_8hpp_a017868d5759b33c18b65ab4d45a488a8}} 
+void \hyperlink{Exercises_8hpp_a017868d5759b33c18b65ab4d45a488a8}{reverse\+The\+Number} ()
+\begin{DoxyCompactList}\small\item\em take number and revese it \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{Exercises_8hpp_a2090203cb4b887ad8f4a31abf73eace0}\label{Exercises_8hpp_a2090203cb4b887ad8f4a31abf73eace0}} 
+void \hyperlink{Exercises_8hpp_a2090203cb4b887ad8f4a31abf73eace0}{guess\+The\+Number} ()
+\begin{DoxyCompactList}\small\item\em Pc guess your number. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Prototypes of functions for exercises. 
+
+\begin{DoxyAuthor}{Author}
+Razmik Martirosyan 
+\end{DoxyAuthor}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{Exercises_8hpp_aaff013486a0e36ffc8a51c929b8ba7dd}\label{Exercises_8hpp_aaff013486a0e36ffc8a51c929b8ba7dd}} 
+\index{Exercises.\+hpp@{Exercises.\+hpp}!count@{count}}
+\index{count@{count}!Exercises.\+hpp@{Exercises.\+hpp}}
+\subsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily void count (\begin{DoxyParamCaption}\item[{int}]{first,  }\item[{int}]{second,  }\item[{char}]{oper }\end{DoxyParamCaption})}
+
+
+
+count first and second operands with oper operator 
+
+
+\begin{DoxyParams}{Parameters}
+{\em first} & -\/ first integer \\
+\hline
+{\em second} & -\/ second integer \\
+\hline
+{\em oper} & -\/ +, -\/, /, $\ast$ arithmetic operator \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Exercises_8hpp_a7b5edbf26f4b0a5f0e2dc3d5f18daf00}\label{Exercises_8hpp_a7b5edbf26f4b0a5f0e2dc3d5f18daf00}} 
+\index{Exercises.\+hpp@{Exercises.\+hpp}!min\+Max\+Changer@{min\+Max\+Changer}}
+\index{min\+Max\+Changer@{min\+Max\+Changer}!Exercises.\+hpp@{Exercises.\+hpp}}
+\subsubsection{\texorpdfstring{min\+Max\+Changer()}{minMaxChanger()}}
+{\footnotesize\ttfamily void min\+Max\+Changer (\begin{DoxyParamCaption}\item[{std\+::string \&}]{user\+Input,  }\item[{int \&}]{min,  }\item[{int \&}]{max,  }\item[{int \&}]{number }\end{DoxyParamCaption})}
+
+
+
+change minimum and maximum by using user\+Input 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&user\+Input} & -\/ take user Inputed string \\
+\hline
+{\em \&min} & -\/ reference to min variable \\
+\hline
+{\em \&max} & -\/ reference to max variable \\
+\hline
+{\em \&number} & -\/ reference to number for changing min or max \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{Exercises_8hpp_a855c9f169bd11754a6437522c0173391}\label{Exercises_8hpp_a855c9f169bd11754a6437522c0173391}} 
+\index{Exercises.\+hpp@{Exercises.\+hpp}!take\+User\+Input@{take\+User\+Input}}
+\index{take\+User\+Input@{take\+User\+Input}!Exercises.\+hpp@{Exercises.\+hpp}}
+\subsubsection{\texorpdfstring{take\+User\+Input()}{takeUserInput()}}
+{\footnotesize\ttfamily void take\+User\+Input (\begin{DoxyParamCaption}\item[{std\+::string \&}]{user\+Input }\end{DoxyParamCaption})}
+
+
+
+take from user low, high or correct answers 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \&user\+Input} & -\/ reference to string variable for input \\
+\hline
+\end{DoxyParams}
