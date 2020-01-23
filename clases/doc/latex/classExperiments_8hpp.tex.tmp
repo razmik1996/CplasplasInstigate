@@ -1,0 +1,31 @@
+\hypertarget{classExperiments_8hpp}{}\section{src/class\+Experiments.hpp File Reference}
+\label{classExperiments_8hpp}\index{src/class\+Experiments.\+hpp@{src/class\+Experiments.\+hpp}}
+
+
+Some experiments with clases, diamond problem and etc.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for class\+Experiments.\+hpp\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPerson}{Person}
+\item 
+class \hyperlink{classStudent}{Student}
+\item 
+class \hyperlink{classTeacher}{Teacher}
+\item 
+class \hyperlink{classAssistent}{Assistent}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Some experiments with clases, diamond problem and etc. 
+
+\begin{DoxyAuthor}{Author}
+Razmik Martirosyan 
+\end{DoxyAuthor}
