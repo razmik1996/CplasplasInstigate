@@ -1,217 +1,240 @@
 #include "classExperiments.hpp"
 #include <iostream>
 
-/**
-@file Exercises.hpp
-@brief Prototypes of functions for exercises
-@author Razmik Martirosyan
-*/
-
 //static value initializing
-int Person::count = 0;
-int Student::count = 0;
-int Teacher::count = 0;
-int Assistent::count = 0;
+int Person::sm_count = 0;
+int Student::sm_count = 0;
+int Teacher::sm_count = 0;
+int Assistent::sm_count = 0;
+
+int defValueAge = 15;
+int defValueHeight = 180;
+std::string defValueName = "Poxos";
+std::string defValueSurname = "Poxosyan";
+std::string defValueProfession = "C++ Enigineer";
+int defValueCourse = 0;
 
 ///class Person
-Person::Person(int age = 10, int height = 180, std::string name = "Poxos", std::string surname = "Poxosyan") {
-    ++count;
-    std::cout << "Constructor called for Person: " << count << std::endl;
+Person::Person(const int age = defValueAge, const int height = defValueHeight,
+              const std::string name = defValueName, const std::string surname = defValueSurname) {
+    ++sm_count;
+    std::cout << "Constructor called for Person: " << sm_count << std::endl;
     setAge(age);
     setHeight(height);
     setName(name);
     setSurname(surname);
 }
 
-void Person::setAge(int age) {
-    this->age = ((age > 0) && (age < 150)) ? age : 10;
+void Person::setAge(const int age) {
+    int minimumAge = 0;
+    int maximumAge = 150;
+    m_age = ((age > minimumAge) && (age < maximumAge)) ? age : defValueAge;
 }
 
 int Person::getAge() const {
-    return age;
+    return m_age;
 }
 
-void Person::setHeight(int height) {
-    this->height = ((height > 20) && (height < 250)) ? height : 180;
+void Person::setHeight(const int height) {
+    int minimumHeight = 20;
+    int maximumHeight = 250;
+    m_height = ((height > minimumHeight) && (height < maximumHeight)) ? height : defValueHeight;
 }
 
 int Person::getHeight() const {
-    return height;
+    return m_height;
 }
 
-void Person::setName(std::string name) {
-    if (name.length() > 2 && name.length() < 30) {
-        this->name = name;
+void Person::setName(const std::string name) {
+    int nameLenght = name.length();
+    int minNameLenght = 2;
+    int maxNameLenght = 30;
+    if ((nameLenght > minNameLenght) && (nameLenght < maxNameLenght)) {
+        m_name = name;
+    } else {
+        m_name = defValueName;
     }
 }
 
 std::string Person::getName() const {
-    return name;
+    return m_name;
 }
 
-void Person::setSurname(std::string surname) {
-    if (surname.length() > 2 && surname.length() < 30) {
-        this->surname = surname;
+void Person::setSurname(const std::string surname) {
+    int surnameLenght = surname.length();
+    int minSurnameLenght = 2;
+    int maxSurnameLenght = 30;
+    if (surnameLenght > minSurnameLenght && surnameLenght < maxSurnameLenght) {
+        m_surname = surname;
+    } else {
+        m_surname = defValueSurname;
     }
 }
 
 std::string Person::getSurname() const {
-    return surname;
+    return m_surname;
 }
     
-void Person::walk() {
+void Person::walk() const {
     std::cout << "Person is walking..." << std::endl;
 }
 
-void Person::read() {
+void Person::read() const {
     std::cout << "Person is reading..." << std::endl;
 }
 
 Person::~Person() {
-    std::cout << "Destructor for Person called..." << count << std::endl;
-    --count;
+    std::cout << "Destructor for Person called..." << sm_count << std::endl;
+    --sm_count;
 }
 
 ///class Student
-Student::Student(int age, int height, std::string name, std::string surname, int course)
+Student::Student(const int age, const int height, const std::string name,
+                const std::string surname, const int course)
 :Person(age, height, name, surname)
 {
-    ++count;
-    std::cout << "Constructor called for Student: " << count << std::endl;
+    ++sm_count;
+    std::cout << "Constructor called for Student: " << sm_count << std::endl;
     setCourse(course);
 }
 
-Student::Student(int course)
+Student::Student(const int course)
 :Person()
 {
-    ++count;
-    std::cout << "Constructor called for Student: " << count << std::endl;
+    ++sm_count;
+    std::cout << "Constructor called for Student: " << sm_count << std::endl;
     setCourse(course);
 }
 
 Student::Student()
 :Person()
 {
-    ++count;
-    std::cout << "Constructor called for Student: " << count << std::endl;
-    setCourse(course);
+    ++sm_count;
+    std::cout << "Constructor called for Student: " << sm_count << std::endl;
+    setCourse(0);
 }
 
-void Student::setCourse(int course) {
-    this->course = ((course >= 0) && (course <= 10)) ? course : 0;
+void Student::setCourse(const int course) {
+    m_course = ((course >= 0) && (course <= 10)) ? course : 0;
 }
 
 int Student::getCourse() const {
-    return course;
+    return m_course;
 }
 
-void Student::walk() {
+void Student::walk() const {
     std::cout << "Student is walking..." << std::endl;
 }
 
-void Student::write() {
+void Student::write() const {
     std::cout << "Student is writing..." << std::endl;
 }
 
-void Student::read() {
+void Student::read() const {
     std::cout << "Student is reading..." << std::endl;
 }
 
 Student::~Student() {
-    std::cout << "Destructor called for Student..." << count << std::endl;
-    --count;
+    std::cout << "Destructor called for Student..." << sm_count << std::endl;
+    --sm_count;
 }
 
 ///class Teacher
-Teacher::Teacher(int age, int height, std::string name, std::string surname, std::string profession)
+Teacher::Teacher(const int age, const int height, const std::string name,
+                const std::string surname, const std::string profession)
 :Person(age, height, name, surname)
 {
-    ++count;
-    std::cout << "Constructor called for Teacher: " << count << std::endl;
+    ++sm_count;
+    std::cout << "Constructor called for Teacher: " << sm_count << std::endl;
     setProfession(profession);
 }
 
-Teacher::Teacher(std::string profession )
+Teacher::Teacher(const std::string profession)
 :Person()
 {
-    ++count;
-    std::cout << "Constructor called for Teacher: " << count << std::endl;
+    ++sm_count;
+    std::cout << "Constructor called for Teacher: " << sm_count << std::endl;
     setProfession(profession);
 }
 
 Teacher::Teacher()
 :Person()
 {
-    ++count;
-    std::cout << "Constructor called for Teacher: " << count << std::endl;
-    setProfession(profession);
+    ++sm_count;
+    std::cout << "Constructor called for Teacher: " << sm_count << std::endl;
+    setProfession("C++ Engineer");
 }
 
-void Teacher::setProfession(std::string profession) {
-    if (profession.length() > 2 && profession.length() < 30) {
-        this->profession = profession;
+void Teacher::setProfession(const std::string profession) {
+    int professionLenght = profession.length();
+    int minProfessionLenght = 2;
+    int maxProfessionLenght = 30;
+    if (professionLenght > minProfessionLenght && professionLenght < maxProfessionLenght) {
+        m_profession = profession;
+    } else {
+        m_profession = defValueSurname;
     }
 }
 
 std::string Teacher::getProfession() const {
-    return profession;
+    return m_profession;
 }
 
-void Teacher::walk() {
+void Teacher::walk() const {
     std::cout << "Teacher is walking..." << std::endl;
 }
 
-void Teacher::write() {
+void Teacher::write() const {
     std::cout << "Teacher is writing..." << std::endl;
 }
 
-void Teacher::read() {
+void Teacher::read() const {
     std::cout << "Teacher is reading..." << std::endl;
 }
 
 Teacher::~Teacher() {
-    std::cout << "Called destructor for Teacher: " << count << std::endl;
-    count--;
+    std::cout << "Called destructor for Teacher: " << sm_count << std::endl;
+    --sm_count;
 }
 
 ///class Assistent
-Assistent::Assistent(int age, int height, std::string name, 
-                    std::string surname, int course, std::string profession)
+Assistent::Assistent(const int age, const int height, const std::string name, 
+                    const std::string surname, const int course, const std::string profession)
                     :Student(age, height, name, surname, course) {
-    ++count;
-    std::cout << "Constructor called for Assistent: " << count << std::endl;
+    ++sm_count;
+    std::cout << "Constructor called for Assistent: " << sm_count << std::endl;
     setProfession(profession);
 }
 
-Assistent::Assistent(int age, int height, std::string name,
-                    std::string surname, std::string profession, int course)
+Assistent::Assistent(const int age, const int height, const std::string name,
+                    const std::string surname, const std::string profession, const int course)
                     :Teacher(age, height, name, surname, profession) {
-    ++count;
-    std::cout << "Constructor called for Assistent: " << count << std::endl;
+    ++sm_count;
+    std::cout << "Constructor called for Assistent: " << sm_count << std::endl;
     setCourse(course);
 }
     
-Assistent::Assistent(std::string profession, int course)
+Assistent::Assistent(const std::string profession, const int course)
 :Student() 
 {
-    ++count;
-    std::cout << "Constructor called for Assistent: " << count << std::endl;
+    ++sm_count;
+    std::cout << "Constructor called for Assistent: " << sm_count << std::endl;
     setProfession(profession);
 }
 
 Assistent::Assistent()
 :Student()
 {
-    ++count;
-    std::cout << "Constructor called for Assistent: " << count << std::endl;
+    ++sm_count;
+    std::cout << "Constructor called for Assistent: " << sm_count << std::endl;
     setProfession("C++ Developer");
 }
 
-void Assistent::read() {
+void Assistent::read() const {
     std::cout << "Assistent is reading..." << std::endl;
 }
 
 Assistent::~Assistent() {
-    std::cout << "Called destructor for Assistent: " << count << std::endl;
-    --count;
+    std::cout << "Called destructor for Assistent: " << sm_count << std::endl;
+    --sm_count;
 }

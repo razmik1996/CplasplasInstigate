@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['teacher',['Teacher',['../classTeacher.html',1,'Teacher'],['../classTeacher.html#aa5505a3ae1de4412c44498498f3a3da3',1,'Teacher::Teacher(int age, int height, std::string name, std::string surname, std::string profession)'],['../classTeacher.html#a04b863c162a0a99c59e4062656ec4d83',1,'Teacher::Teacher(std::string profession)'],['../classTeacher.html#a0d09b151c46e2abb647a2ae40cc5510c',1,'Teacher::Teacher()']]]
+  ['teacher',['Teacher',['../classTeacher.html',1,'Teacher'],['../classTeacher.html#a8760a0c0903c3183f5b8a8a7439a9fe0',1,'Teacher::Teacher(const int age, const int height, const std::string name, const std::string surname, const std::string profession)'],['../classTeacher.html#ad11514a739f8d862376e9d38016e5dea',1,'Teacher::Teacher(const std::string profession)'],['../classTeacher.html#a0d09b151c46e2abb647a2ae40cc5510c',1,'Teacher::Teacher()']]]
 ];

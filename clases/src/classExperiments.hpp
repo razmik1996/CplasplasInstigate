@@ -10,25 +10,26 @@
 @class Person
 */
 class Person {
-    static int count;
-    int age;
-    int height;
-    std::string name;
-    std::string surname;
+    static int sm_count;
+    int m_age;
+    int m_height;
+    std::string m_name;
+    std::string m_surname;
 public:
     /**
     @brief Class constructor
-    @param age - age of person
-    @param height - height of person
-    @param name - person name
-    @param surname - person surname
+    @param age - age of person (minimum age = 0, maximum 150 else default value is 15)
+    @param height - height of person (minimum height = 20, maximum 250 else def val is 180)
+    @param name - person name (minimum lenght is 2 max 30 else def value is Poghos)
+    @param surname - person surname (minimum lenght is 2 max 30 else def val is Poghos)
     */
-    Person(int age, int height, std::string name, std::string surname);
+    Person(const int age, const int height,
+            const std::string name, const std::string surname);
     /**
     @brief Seter for age
     @param age - age of person
     */
-    void setAge(int age);
+    void setAge(const int age);
     /**
     @brief Geter for age
     */
@@ -37,7 +38,7 @@ public:
     @brief Seter for height
     @param height - height of person
     */
-    void setHeight(int height);
+    void setHeight(const int height);
     /**
     @brief Geter for height
     */
@@ -46,7 +47,7 @@ public:
     @brief Seter for name
     @param name - person name
     */
-    void setName(std::string name);
+    void setName(const std::string name);
     /**
     @brief Geter for name
     */
@@ -55,7 +56,7 @@ public:
     @brief Seter for surname
     @param surname - person surname
     */
-    void setSurname(std::string surname);
+    void setSurname(const std::string surname);
     /**
     @brief Geter for surname
     */
@@ -63,15 +64,15 @@ public:
     /**
     @brief Function for printing person is walking non-virtual
     */
-    void walk();
+    void walk() const;
     /**
     @brief Function for printing person is reading virtual
     */
-    virtual void read();
+    virtual void read() const;
     /**
     @brief Function for printing person is writing clean virtual
     */
-    virtual void write() = 0;
+    virtual void write() const = 0;
     /**
     @brief virtual destructor for person
     */
@@ -82,23 +83,24 @@ public:
 @class Student
 */
 class Student: public Person {
-    int course;
-    static int count;
+    int m_course;
+    static int sm_count;
 public:
     /**
     @brief Class constructor
-    @param age - age of person
-    @param height - height of person
-    @param name - person name
-    @param surname - person surname
-    @param course - course of student
+    @param age - age of person (minimum age = 0, maximum 150 else default value is 15)
+    @param height - height of person (minimum height = 20, maximum 250 else def val is 180)
+    @param name - person name (minimum lenght is 2 max 30 else def value is Poghos)
+    @param surname - person surname (minimum lenght is 2 max 30 else def val is Poghos)
+    @param course - course of student (minimum course is 0 max 10 else def val is 0)
     */
-    Student(int age, int height, std::string name, std::string surname, int course);
+    Student(const int age, const int height, const std::string name,
+            const std::string surname, const int course);
     /**
     @brief Class constructor 2
     @param course - course of student
     */
-    Student(int course);
+    Student(const int course);
     /**
     @brief Class default constructor
     */
@@ -107,7 +109,7 @@ public:
     @brief Seter for course
     @param course - student course
     */
-    void setCourse(int course);
+    void setCourse(const int course);
     /**
     @brief geter for course
     */
@@ -115,15 +117,15 @@ public:
     /**
     @brief Function for printing student is reading virtual
     */
-    virtual void read();
+    virtual void read() const;
     /**
     @brief Function for printing student is walking non-virtual
     */
-    void walk();
+    void walk() const;
     /**
     @brief Function for printing student is writing virtual for this
     */
-    void write();
+    void write() const;
     /**
     @brief virtual destructor for student
     */
@@ -134,23 +136,24 @@ public:
 @class Teacher 
 */
 class Teacher: public Person {
-    std::string profession;
-    static int count;
+    std::string m_profession;
+    static int sm_count;
 public:
     /**
     @brief Class constructor
-    @param age - age of person
-    @param height - height of person
-    @param name - person name
-    @param surname - person surname
-    @param profession - profession of teacher
+    @param age - age of person (minimum age = 0, maximum 150 else default value is 15)
+    @param height - height of person (minimum height = 20, maximum 250 else def val is 180)
+    @param name - person name (minimum lenght is 2 max 30 else def value is Poghos)
+    @param surname - person surname (minimum lenght is 2 max 30 else def val is Poghos)
+    @param profession - profession of teacher (minimum lenght is 2 max 30 else def val is C++ Engineer)
     */
-    Teacher(int age, int height, std::string name, std::string surname, std::string profession);
+    Teacher(const int age, const int height, const std::string name,
+            const std::string surname, const std::string profession);
     /**
     @brief Class constructor 2
     @param profession - profession of teacher
     */
-    Teacher(std::string profession);
+    Teacher(const std::string profession);
     /**
     @brief Class default constructor
     */
@@ -159,7 +162,7 @@ public:
     @brief Setter for teacher profession
     @param profession - profession of teacher
     */
-    void setProfession(std::string profession);
+    void setProfession(const std::string profession);
     /**
     @brief Getter for teacher profession
     */
@@ -167,15 +170,15 @@ public:
     /**
     @brief Function for printing teacher is reading virtual
     */
-    virtual void read();
+    virtual void read() const;
     /**
     @brief Function for printing teacher is walking non-virtual
     */
-    void walk();
+    void walk() const;
     /**
     @brief Function for printing teacher is rwriting virtual for this
     */
-    void write();
+    void write() const;
     /**
     @brief virtual destructor for teacher
     */
@@ -187,18 +190,20 @@ public:
 */
 class Assistent: public Teacher, public Student {
 private:
-    static int count;
+    static int sm_count;
 public:
     /**
     @brief Class constructor
-    @param age - age of person
-    @param height - height of person
-    @param name - person name
-    @param surname - person surname
-    @param course - course of assistent
-    @param profession - profession of assistent
+    @param age - age of person (minimum age = 0, maximum 150 else default value is 15)
+    @param height - height of person (minimum height = 20, maximum 250 else def val is 180)
+    @param name - person name (minimum lenght is 2 max 30 else def value is Poghos)
+    @param surname - person surname (minimum lenght is 2 max 30 else def val is Poghos)
+    @param course - course of student (minimum course is 0 max 10 else def val is 0)
+    @param profession - profession of teacher (minimum lenght is 2 max 30 else def val is C++ Engineer)
     */
-    Assistent(int age, int height, std::string name, std::string surname, int course, std::string profession);
+    Assistent(const int age, const int height, const std::string name,
+                const std::string surname, const int course,
+                const std::string profession);
     /**
     @brief Class constructor
     @param age - age of person
@@ -208,13 +213,15 @@ public:
     @param profession - profession of assistent
     @param course - course of assistent
     */
-    Assistent(int age, int height, std::string name, std::string surname, std::string profession, int course);
+    Assistent(const int age, const int height, const std::string name,
+                const std::string surname, const std::string profession,
+                const int course);
     /**
     @brief Class constructor
     @param profession - profession of assistent
     @param course - course of assistent
     */
-    Assistent(std::string profession, int course);
+    Assistent(const std::string profession, const int course);
     /**
     @brief Class default constructor 
     */
@@ -222,7 +229,7 @@ public:
     /**
     @brief Function for printing assistent is reading virtual
     */
-    virtual void read();
+    virtual void read() const;
     /**
     @brief virtual destructor for assistent
     */

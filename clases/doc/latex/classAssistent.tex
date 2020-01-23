@@ -11,17 +11,17 @@ Collaboration diagram for Assistent\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classAssistent_a08a75cce0e15aea59b13177d1384dd3e}{Assistent} (int age, int height, std\+::string name, std\+::string surname, int course, std\+::string profession)
+\hyperlink{classAssistent_a9c294d2c2e77a296a1ee084924a20556}{Assistent} (const int age, const int height, const std\+::string name, const std\+::string surname, const int course, const std\+::string profession)
 \begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
-\hyperlink{classAssistent_a7fce47ab2254dc05b40390a54549ff08}{Assistent} (int age, int height, std\+::string name, std\+::string surname, std\+::string profession, int course)
+\hyperlink{classAssistent_a4c8edfaa4b12bfccbeb1356ab82fa17c}{Assistent} (const int age, const int height, const std\+::string name, const std\+::string surname, const std\+::string profession, const int course)
 \begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
-\hyperlink{classAssistent_a99699126196ef2f396daef5699beb0d9}{Assistent} (std\+::string profession, int course)
+\hyperlink{classAssistent_a1b01d24ab58eb26fbfc0dc88e0c75255}{Assistent} (const std\+::string profession, const int course)
 \begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classAssistent_ac196ff7c71a1efecdc8f2678246f5b91}\label{classAssistent_ac196ff7c71a1efecdc8f2678246f5b91}} 
 \hyperlink{classAssistent_ac196ff7c71a1efecdc8f2678246f5b91}{Assistent} ()
 \begin{DoxyCompactList}\small\item\em Class default constructor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classAssistent_ae8c0b90b0eb31e413f975cc428d55fac}\label{classAssistent_ae8c0b90b0eb31e413f975cc428d55fac}} 
-virtual void \hyperlink{classAssistent_ae8c0b90b0eb31e413f975cc428d55fac}{read} ()
+\mbox{\Hypertarget{classAssistent_a87e86658bb7109b439d28d9694ababde}\label{classAssistent_a87e86658bb7109b439d28d9694ababde}} 
+virtual void \hyperlink{classAssistent_a87e86658bb7109b439d28d9694ababde}{read} () const
 \begin{DoxyCompactList}\small\item\em Function for printing assistent is reading virtual. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classAssistent_af2fc524ca3bdd928226ad3944d60913d}\label{classAssistent_af2fc524ca3bdd928226ad3944d60913d}} 
 virtual \hyperlink{classAssistent_af2fc524ca3bdd928226ad3944d60913d}{$\sim$\+Assistent} ()
@@ -29,11 +29,11 @@ virtual \hyperlink{classAssistent_af2fc524ca3bdd928226ad3944d60913d}{$\sim$\+Ass
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classAssistent_a08a75cce0e15aea59b13177d1384dd3e}\label{classAssistent_a08a75cce0e15aea59b13177d1384dd3e}} 
+\mbox{\Hypertarget{classAssistent_a9c294d2c2e77a296a1ee084924a20556}\label{classAssistent_a9c294d2c2e77a296a1ee084924a20556}} 
 \index{Assistent@{Assistent}!Assistent@{Assistent}}
 \index{Assistent@{Assistent}!Assistent@{Assistent}}
 \subsubsection{\texorpdfstring{Assistent()}{Assistent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
-{\footnotesize\ttfamily Assistent\+::\+Assistent (\begin{DoxyParamCaption}\item[{int}]{age,  }\item[{int}]{height,  }\item[{std\+::string}]{name,  }\item[{std\+::string}]{surname,  }\item[{int}]{course,  }\item[{std\+::string}]{profession }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Assistent\+::\+Assistent (\begin{DoxyParamCaption}\item[{const int}]{age,  }\item[{const int}]{height,  }\item[{const std\+::string}]{name,  }\item[{const std\+::string}]{surname,  }\item[{const int}]{course,  }\item[{const std\+::string}]{profession }\end{DoxyParamCaption})}
 
 
 
@@ -43,24 +43,24 @@ class \hyperlink{classAssistent}{Assistent}
 
 
 \begin{DoxyParams}{Parameters}
-{\em age} & -\/ age of person \\
+{\em age} & -\/ age of person (minimum age = 0, maximum 150 else default value is 15) \\
 \hline
-{\em height} & -\/ height of person \\
+{\em height} & -\/ height of person (minimum height = 20, maximum 250 else def val is 180) \\
 \hline
-{\em name} & -\/ person name \\
+{\em name} & -\/ person name (minimum lenght is 2 max 30 else def value is Poghos) \\
 \hline
-{\em surname} & -\/ person surname \\
+{\em surname} & -\/ person surname (minimum lenght is 2 max 30 else def val is Poghos) \\
 \hline
-{\em course} & -\/ course of assistent \\
+{\em course} & -\/ course of student (minimum course is 0 max 10 else def val is 0) \\
 \hline
-{\em profession} & -\/ profession of assistent \\
+{\em profession} & -\/ profession of teacher (minimum lenght is 2 max 30 else def val is C++ Engineer) \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classAssistent_a7fce47ab2254dc05b40390a54549ff08}\label{classAssistent_a7fce47ab2254dc05b40390a54549ff08}} 
+\mbox{\Hypertarget{classAssistent_a4c8edfaa4b12bfccbeb1356ab82fa17c}\label{classAssistent_a4c8edfaa4b12bfccbeb1356ab82fa17c}} 
 \index{Assistent@{Assistent}!Assistent@{Assistent}}
 \index{Assistent@{Assistent}!Assistent@{Assistent}}
 \subsubsection{\texorpdfstring{Assistent()}{Assistent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
-{\footnotesize\ttfamily Assistent\+::\+Assistent (\begin{DoxyParamCaption}\item[{int}]{age,  }\item[{int}]{height,  }\item[{std\+::string}]{name,  }\item[{std\+::string}]{surname,  }\item[{std\+::string}]{profession,  }\item[{int}]{course }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Assistent\+::\+Assistent (\begin{DoxyParamCaption}\item[{const int}]{age,  }\item[{const int}]{height,  }\item[{const std\+::string}]{name,  }\item[{const std\+::string}]{surname,  }\item[{const std\+::string}]{profession,  }\item[{const int}]{course }\end{DoxyParamCaption})}
 
 
 
@@ -81,11 +81,11 @@ Class constructor.
 {\em course} & -\/ course of assistent \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classAssistent_a99699126196ef2f396daef5699beb0d9}\label{classAssistent_a99699126196ef2f396daef5699beb0d9}} 
+\mbox{\Hypertarget{classAssistent_a1b01d24ab58eb26fbfc0dc88e0c75255}\label{classAssistent_a1b01d24ab58eb26fbfc0dc88e0c75255}} 
 \index{Assistent@{Assistent}!Assistent@{Assistent}}
 \index{Assistent@{Assistent}!Assistent@{Assistent}}
 \subsubsection{\texorpdfstring{Assistent()}{Assistent()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
-{\footnotesize\ttfamily Assistent\+::\+Assistent (\begin{DoxyParamCaption}\item[{std\+::string}]{profession,  }\item[{int}]{course }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Assistent\+::\+Assistent (\begin{DoxyParamCaption}\item[{const std\+::string}]{profession,  }\item[{const int}]{course }\end{DoxyParamCaption})}
 
 
 

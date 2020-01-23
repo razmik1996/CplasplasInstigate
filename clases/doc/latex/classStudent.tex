@@ -11,26 +11,26 @@ Collaboration diagram for Student\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classStudent_aa849d9b60484adb7bd3ec7e137ab8d03}{Student} (int age, int height, std\+::string name, std\+::string surname, int course)
+\hyperlink{classStudent_a0b9f4c8399cf35540091f2499023ff2c}{Student} (const int age, const int height, const std\+::string name, const std\+::string surname, const int course)
 \begin{DoxyCompactList}\small\item\em Class constructor. \end{DoxyCompactList}\item 
-\hyperlink{classStudent_ac8c023bf9bcc7de27614d1b8f7511e4f}{Student} (int course)
+\hyperlink{classStudent_a596f8938f4cea748edcc02e0bc155022}{Student} (const int course)
 \begin{DoxyCompactList}\small\item\em Class constructor 2. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classStudent_af9168cedbfa5565cf0b20c1a9d3f5c9d}\label{classStudent_af9168cedbfa5565cf0b20c1a9d3f5c9d}} 
 \hyperlink{classStudent_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student} ()
 \begin{DoxyCompactList}\small\item\em Class default constructor. \end{DoxyCompactList}\item 
-void \hyperlink{classStudent_af7affdfd5b1b9e4d8c8d1fcb1e2cc631}{set\+Course} (int course)
+void \hyperlink{classStudent_a1e64e97ae728b602fedc7770661a05e6}{set\+Course} (const int course)
 \begin{DoxyCompactList}\small\item\em Seter for course. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classStudent_a7ca1414a43b0c0194defe9a7929567a2}\label{classStudent_a7ca1414a43b0c0194defe9a7929567a2}} 
 int \hyperlink{classStudent_a7ca1414a43b0c0194defe9a7929567a2}{get\+Course} () const
 \begin{DoxyCompactList}\small\item\em geter for course \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classStudent_a5e6ffbc94fe74a4346b1a94ded0db106}\label{classStudent_a5e6ffbc94fe74a4346b1a94ded0db106}} 
-virtual void \hyperlink{classStudent_a5e6ffbc94fe74a4346b1a94ded0db106}{read} ()
+\mbox{\Hypertarget{classStudent_a9d8a4c4d7c9f1d9adcf1565b11eacf60}\label{classStudent_a9d8a4c4d7c9f1d9adcf1565b11eacf60}} 
+virtual void \hyperlink{classStudent_a9d8a4c4d7c9f1d9adcf1565b11eacf60}{read} () const
 \begin{DoxyCompactList}\small\item\em Function for printing student is reading virtual. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classStudent_a1b43e49d7112c4c1b48e44d6cc660439}\label{classStudent_a1b43e49d7112c4c1b48e44d6cc660439}} 
-void \hyperlink{classStudent_a1b43e49d7112c4c1b48e44d6cc660439}{walk} ()
+\mbox{\Hypertarget{classStudent_a889098d7e86767c878db7ad6170ff011}\label{classStudent_a889098d7e86767c878db7ad6170ff011}} 
+void \hyperlink{classStudent_a889098d7e86767c878db7ad6170ff011}{walk} () const
 \begin{DoxyCompactList}\small\item\em Function for printing student is walking non-\/virtual. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classStudent_a8135ee131b8e83633a15209fccaf8700}\label{classStudent_a8135ee131b8e83633a15209fccaf8700}} 
-void \hyperlink{classStudent_a8135ee131b8e83633a15209fccaf8700}{write} ()
+\mbox{\Hypertarget{classStudent_a22acfcea773405fa81a2839640ac0a1d}\label{classStudent_a22acfcea773405fa81a2839640ac0a1d}} 
+void \hyperlink{classStudent_a22acfcea773405fa81a2839640ac0a1d}{write} () const
 \begin{DoxyCompactList}\small\item\em Function for printing student is writing virtual for this. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classStudent_a54a8ea060d6cd04222c3a2f89829f105}\label{classStudent_a54a8ea060d6cd04222c3a2f89829f105}} 
 virtual \hyperlink{classStudent_a54a8ea060d6cd04222c3a2f89829f105}{$\sim$\+Student} ()
@@ -38,11 +38,11 @@ virtual \hyperlink{classStudent_a54a8ea060d6cd04222c3a2f89829f105}{$\sim$\+Stude
 
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classStudent_aa849d9b60484adb7bd3ec7e137ab8d03}\label{classStudent_aa849d9b60484adb7bd3ec7e137ab8d03}} 
+\mbox{\Hypertarget{classStudent_a0b9f4c8399cf35540091f2499023ff2c}\label{classStudent_a0b9f4c8399cf35540091f2499023ff2c}} 
 \index{Student@{Student}!Student@{Student}}
 \index{Student@{Student}!Student@{Student}}
 \subsubsection{\texorpdfstring{Student()}{Student()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Student\+::\+Student (\begin{DoxyParamCaption}\item[{int}]{age,  }\item[{int}]{height,  }\item[{std\+::string}]{name,  }\item[{std\+::string}]{surname,  }\item[{int}]{course }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Student\+::\+Student (\begin{DoxyParamCaption}\item[{const int}]{age,  }\item[{const int}]{height,  }\item[{const std\+::string}]{name,  }\item[{const std\+::string}]{surname,  }\item[{const int}]{course }\end{DoxyParamCaption})}
 
 
 
@@ -52,22 +52,22 @@ class \hyperlink{classStudent}{Student}
 
 
 \begin{DoxyParams}{Parameters}
-{\em age} & -\/ age of person \\
+{\em age} & -\/ age of person (minimum age = 0, maximum 150 else default value is 15) \\
 \hline
-{\em height} & -\/ height of person \\
+{\em height} & -\/ height of person (minimum height = 20, maximum 250 else def val is 180) \\
 \hline
-{\em name} & -\/ person name \\
+{\em name} & -\/ person name (minimum lenght is 2 max 30 else def value is Poghos) \\
 \hline
-{\em surname} & -\/ person surname \\
+{\em surname} & -\/ person surname (minimum lenght is 2 max 30 else def val is Poghos) \\
 \hline
-{\em course} & -\/ course of student \\
+{\em course} & -\/ course of student (minimum course is 0 max 10 else def val is 0) \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classStudent_ac8c023bf9bcc7de27614d1b8f7511e4f}\label{classStudent_ac8c023bf9bcc7de27614d1b8f7511e4f}} 
+\mbox{\Hypertarget{classStudent_a596f8938f4cea748edcc02e0bc155022}\label{classStudent_a596f8938f4cea748edcc02e0bc155022}} 
 \index{Student@{Student}!Student@{Student}}
 \index{Student@{Student}!Student@{Student}}
 \subsubsection{\texorpdfstring{Student()}{Student()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Student\+::\+Student (\begin{DoxyParamCaption}\item[{int}]{course }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Student\+::\+Student (\begin{DoxyParamCaption}\item[{const int}]{course }\end{DoxyParamCaption})}
 
 
 
@@ -81,11 +81,11 @@ Class constructor 2.
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classStudent_af7affdfd5b1b9e4d8c8d1fcb1e2cc631}\label{classStudent_af7affdfd5b1b9e4d8c8d1fcb1e2cc631}} 
+\mbox{\Hypertarget{classStudent_a1e64e97ae728b602fedc7770661a05e6}\label{classStudent_a1e64e97ae728b602fedc7770661a05e6}} 
 \index{Student@{Student}!set\+Course@{set\+Course}}
 \index{set\+Course@{set\+Course}!Student@{Student}}
 \subsubsection{\texorpdfstring{set\+Course()}{setCourse()}}
-{\footnotesize\ttfamily void Student\+::set\+Course (\begin{DoxyParamCaption}\item[{int}]{course }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Student\+::set\+Course (\begin{DoxyParamCaption}\item[{const int}]{course }\end{DoxyParamCaption})}
 
 
 
