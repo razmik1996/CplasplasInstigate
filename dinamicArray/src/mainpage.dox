@@ -1,0 +1,23 @@
+/*! \mainpage DOC for dynamicArray
+ *
+ * \section Introduction
+ *
+ * Class dynamic array.
+ * You can create aray which can change size as required
+ * array has push_back function which can add new element from front
+ * 
+ * \section Testing
+ * 
+ * Step 1 - Creating 4 sized array for Person*\n
+ * Step 2 - Creating 2 students 2 teachers and 3 assistents\n
+ * Step 3 - Assignment 4 pointers to 2 students and 2 teachers\n
+ * Step 4 - Call from assistents read and write\n
+ * Step 5 - Call from pointers read, write and walk\n
+ * Step 6 - Delete teachers and students by pointers\n
+ * Step 7 - Delete assistents from assistent pointers\n
+ *
+ * \section Installation
+ *
+ * step 1: type make\n
+ * step 2: run program ./bin/classExperiments
+ */
