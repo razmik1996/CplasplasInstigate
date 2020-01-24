@@ -1,3 +1,6 @@
+#ifndef CLASSEXPERIMENTS_HPP
+#define CLASSEXPERIMENTS_HPP
+
 #include <string>
 
 /**
@@ -10,6 +13,7 @@
 @class Person
 */
 class Person {
+private:
     static int sm_count;
     int m_age;
     int m_height;
@@ -83,6 +87,7 @@ public:
 @class Student
 */
 class Student: public Person {
+private:
     int m_course;
     static int sm_count;
 public:
@@ -136,6 +141,7 @@ public:
 @class Teacher 
 */
 class Teacher: public Person {
+private:
     std::string m_profession;
     static int sm_count;
 public:
@@ -235,3 +241,5 @@ public:
     */
     virtual ~Assistent();
 };
+
+#endif //CLASSEXPERIMENTS_HPP
