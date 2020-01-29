@@ -10,43 +10,140 @@
 @brief class Dyn_array
 */
 
+/**
+@class Dyn_array
+*/
 template <class T>
 class Dyn_array {
     ///friend functions
+    /**
+    @brief operator<< overwriting << for cout function print all elements of dynamic array
+    @param ostream &out - reference to ostream srteam
+    @param Dyn_array<T> &object - reference to print dynamic array
+    */
     template<class S>
     friend std::ostream& operator<<(std::ostream &out, const Dyn_array<S> &object);
+    /**
+    @brief operator>> overwriting >> for cin function to insert all elements of dynamic array
+    @param ostream &out - reference to istream srteam
+    @param Dyn_array<T> &object - reference to insert dynamic array
+    */
     template<class S>
     friend std::istream& operator>>(std::istream &in, Dyn_array<S> &object);
 private: ///private members
-    T* m_ptr;
-    size_t m_size;
-    size_t m_capacity;
+    T* m_ptr; /*!< Pointer to first element of dynamic array */
+    size_t m_size; /*!< size of declared values in Dynamic array */
+    size_t m_capacity; /*!< size of allocated memory */
 private: ///private methods
+    /**
+    @brief When capacity = size capacity = capacity * 1.62
+    @param capacity - if you want allocate custom capacity give new capacity 
+                        or give m_capacity if you want just multiply
+    */
     size_t& new_capacity(const size_t capacity);
-    size_t copy();
+    /**
+    @brief just reallocate and copy old values
+    */
+    size_t reallocate_and_copy();
+    /**
+    @brief new capacity for insert function with adding value to index pos
+    @param size_t index - position for adding value
+    @param T& value - reference to value
+    */
     size_t& new_capacity_insert(const size_t index, const T& value);
+    /**
+    @brief check equal or not size == capacity
+    */
     bool check_capacity();
+    /**
+    @brief copy for insert function
+    @param T* ptr - pointer to old array to value
+    @param size_t index - position for adding value
+    */
     size_t& copy_for_insert(T* ptr, const size_t index);
 public: ///constructors and destructor
+    /**
+    @brief defalut constructor
+    */
     Dyn_array();
+    /**
+    @brief constructor for dinamic array with custom capacity and with default value
+    @param size_t capacity - size of array capacity = size + 1
+    @param T def_value - default value for all elements
+    */
     Dyn_array(const size_t capacity, const T def_value);
+    /**
+    @brief constructor for dinamic array with custom capacity, size and with default value
+    @brief Set of allowed values SIZE < capacity and both > 0
+    @param size_t SIZE - size of array
+    @param size_t capacity - capacity of array
+    @param T def_value - default value for all elements
+    */
     Dyn_array(const size_t SIZE, const size_t capacity, const T def_value);
+    /**
+    @brief constructor for dinamic array with values from other array
+    @param T* array - other array
+    @param size_t SIZE - array SIZE
+    */
     Dyn_array(const T* array, const size_t SIZE);
+    /**
+    @brief constructor for dinamic array with values from other array
+    @param size_t from - from element
+    @param size_t to - to element
+    */
     Dyn_array(const T* array, size_t from, const size_t to);
+    /**
+    @brief Copy constructor
+    @param Dyn_array &other - other container for copy
+    */
     Dyn_array(const Dyn_array &other);
+    /**
+    @brief Destructor
+    */
     ~Dyn_array();
 public: ///public methods
+    /**
+    @brief return capacity
+    */
     size_t capacity() const;
+    /**
+    @brief return size
+    */
     size_t size() const;
+    /**
+    @brief is empty array or not
+    */
     bool is_empty() const;
+    /**
+    @brief capacity = size
+    */
     bool shrnk_to_fit();
+    /**
+    @brief reserve capacity
+    @param size_t new_capacity - new capacity size for allocating
+    */
     size_t reserve(const size_t new_capacity);
+    /**
+    @brief clear all container
+    */
     bool clear();
     size_t resize(const size_t count, const T& value);
     size_t resize(const size_t count);
+    /**
+    @brief push value after end element
+    @param T& value - value for pushing
+    */
     bool push_back(const T& value);
-    bool push_back(T&& val);
+//    bool push_back(T&& val);
+    /**
+    @brief pop from end
+    */
     bool pop_back();
+    /**
+    @brief insert value before index element
+    @param index - index of value
+    @param value - value for pushing
+    */
     T* insert(size_t index, const T& value);
 public: ///operator overloading
     T& operator=(Dyn_array &other);
@@ -58,23 +155,27 @@ public: ///operator overloading
 ///private methods
 template <class T>
 size_t& Dyn_array<T>::new_capacity(const size_t capacity) {
-    float coeficent = ((1 + 2.23) / 2);
-    while (m_capacity <= capacity) {
-        m_capacity = (int)(m_capacity * coeficent);
+    if (m_capacity < 2) {
+        m_capacity = 2;
+    } else {
+        float coeficent = ((1 + 2.23) / 2);
+        while (m_capacity <= capacity) {
+            m_capacity = (int)(m_capacity * coeficent);
+        }
     }
 }
 
 template <class T>
 bool Dyn_array<T>::check_capacity() {
     if (m_capacity == m_size) {
-        return false;
-    } else {
         return true;
+    } else {
+        return false;
     }
 }
 
 template <class T>
-size_t Dyn_array<T>::copy() {
+size_t Dyn_array<T>::reallocate_and_copy() {
     T* tmp = m_ptr;
     m_ptr = new T[m_capacity];
     for (int i = 0; i < m_size; ++i) {
@@ -97,8 +198,7 @@ size_t& Dyn_array<T>::copy_for_insert(T* ptr, const size_t index) {
     
 template <class T>
 size_t& Dyn_array<T>::new_capacity_insert(const size_t index, const T& value) {
-    float coeficent = ((1 + 2.23) / 2);
-    m_capacity = (int)(m_capacity * coeficent);
+    new_capacity(m_capacity);
     T* tmp = m_ptr;
     m_ptr = new T[m_capacity];
     copy_for_insert(tmp, index);
@@ -112,7 +212,7 @@ template <class T>
 Dyn_array<T>::Dyn_array(){
     m_ptr = nullptr;
     m_size = 0;
-    m_capacity = 1;
+    m_capacity = 0;
 }
 
 template <class T>
@@ -188,14 +288,12 @@ bool Dyn_array<T>::is_empty() const {
 
 template <class T>
 bool Dyn_array<T>::shrnk_to_fit() {
-    if (!(check_capacity())) {
+    if (check_capacity()) {
         return true;
     }
     if (m_size < m_capacity) {
-        T* ptr = nullptr;
-        ptr = m_ptr + m_size;
-        delete[] ptr;
         m_capacity = m_size;
+        reallocate_and_copy();
         return true;
     }
     return false;
@@ -207,7 +305,7 @@ size_t Dyn_array<T>::reserve(const size_t capacity) {
         return m_capacity;
     } else {
         new_capacity(capacity);
-        copy();
+        reallocate_and_copy();
         return m_capacity;
     }
 }
@@ -222,30 +320,31 @@ bool Dyn_array<T>::clear() {
 
 template <class T>
 bool Dyn_array<T>::push_back(const T& value) {
-    if (!(check_capacity())) {
+    if (check_capacity()) {
         new_capacity(m_capacity);
-        copy();
+        reallocate_and_copy();
     }
     m_ptr[m_size] = value;
     ++m_size;
     return true;
 }
 
+/*
 template <class T>
 bool Dyn_array<T>::push_back(T&& val) {
 
 }
+*/
 
 template <class T>
 bool Dyn_array<T>::pop_back() {
-    m_ptr[m_size - 1] = NULL;
     --m_size;
     return true;
 }
 
 template <class T>
 T* Dyn_array<T>::insert(size_t index, const T& value) {
-    if (!(check_capacity())) {
+    if (check_capacity()) {
         new_capacity_insert(index, &value);
     } else if(index == m_size) {
         push_back(value);

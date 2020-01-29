@@ -1,0 +1,34 @@
+\hypertarget{dynArray_8hpp}{}\section{src/dyn\+Array.hpp File Reference}
+\label{dynArray_8hpp}\index{src/dyn\+Array.\+hpp@{src/dyn\+Array.\+hpp}}
+
+
+class \hyperlink{classDyn__array}{Dyn\+\_\+array}  
+
+
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}utils.\+hpp\char`\"{}}\newline
+Include dependency graph for dyn\+Array.\+hpp\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDyn__array}{Dyn\+\_\+array$<$ T $>$}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{dynArray_8hpp_af425b5ed4ee13a93985fb31c1b643655}\label{dynArray_8hpp_af425b5ed4ee13a93985fb31c1b643655}} 
+{\footnotesize template$<$class T $>$ }\\std\+::ostream \& \hyperlink{dynArray_8hpp_af425b5ed4ee13a93985fb31c1b643655}{operator$<$$<$} (std\+::ostream \&out, const \hyperlink{classDyn__array}{Dyn\+\_\+array}$<$ T $>$ \&object)
+\begin{DoxyCompactList}\small\item\em friend functions \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{dynArray_8hpp_a339e466dd88c36bb804d16e065abc683}\label{dynArray_8hpp_a339e466dd88c36bb804d16e065abc683}} 
+{\footnotesize template$<$class T $>$ }\\std\+::istream \& {\bfseries operator$>$$>$} (std\+::istream \&in, \hyperlink{classDyn__array}{Dyn\+\_\+array}$<$ T $>$ \&object)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+class \hyperlink{classDyn__array}{Dyn\+\_\+array} 
+
+\begin{DoxyAuthor}{Author}
+Razmik Martirosyan 
+\end{DoxyAuthor}

@@ -8,13 +8,15 @@
  * 
  * \section Testing
  * 
- * Step 1 - Creating 4 sized array for Person*\n
- * Step 2 - Creating 2 students 2 teachers and 3 assistents\n
- * Step 3 - Assignment 4 pointers to 2 students and 2 teachers\n
- * Step 4 - Call from assistents read and write\n
- * Step 5 - Call from pointers read, write and walk\n
- * Step 6 - Delete teachers and students by pointers\n
- * Step 7 - Delete assistents from assistent pointers\n
+ * Step 1 - Creating dynamicArray object*\n
+ * Step 2 - pushing 5 and printing size, capacity and first element\n
+ * Step 3 - pushing 8 and printing size and capacity\n
+ * Step 4 - pushing 20 and printing size and capacity\n
+ * Step 5 - pushing 15 and printing size and capacity\n
+ * Step 6 - pushing 13 and printing size and capacity\n
+ * Step 7 - pushing tree 3 and printing size, capacity and elements of dynamicArray\n
+ * Step 8 - poping element and print size, capacity and elements of dynamicArray\n
+ * Step 9 - shrinking to fit printing size, capacity and elements of dynamicArray\n
  *
  * \section Installation
  *
