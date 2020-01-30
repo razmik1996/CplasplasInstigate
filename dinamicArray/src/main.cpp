@@ -1,8 +1,22 @@
 #include <iostream>
+#include <string>
 #include "dynArray.hpp"
+#include "utils.hpp"
 
 int miniProgramforTest() {
-Dyn_array<int> vector;
+    int SIZE = 10;
+    Dyn_array<int> vector;
+    Dyn_array<float> vectorFloat(SIZE, 0.5);
+    Dyn_array<char> vectorChar(SIZE, 16, 'a');
+
+    int * ptr = new int[SIZE];
+    randArray(ptr, SIZE);
+    Dyn_array<int> vectorArray(ptr, SIZE);
+
+    Dyn_array<std::string> vectorString(SIZE, 15, "");
+
+
+    
     vector.push_back(5);
     std::cout << "Pushing 5 to dinamic array" << std::endl;
     std::cout << "Vector size is: " << vector.size() << std::endl;

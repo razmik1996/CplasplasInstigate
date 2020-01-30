@@ -158,7 +158,7 @@ size_t& Dyn_array<T>::new_capacity(const size_t capacity) {
     if (m_capacity < 2) {
         m_capacity = 2;
     } else {
-        float coeficent = ((1 + 2.23) / 2);
+        float coeficent = 1.62;
         while (m_capacity <= capacity) {
             m_capacity = (int)(m_capacity * coeficent);
         }
@@ -263,6 +263,9 @@ Dyn_array<T>::Dyn_array(const Dyn_array &other) {
     m_capacity = other.capacity();
     m_ptr = new T[m_capacity];
     m_size = other.size();
+    for (int i = 0; i < m_size; ++i) {
+        m_ptr[i] = other[i];
+    }
 }
 
 template <class T>
@@ -381,7 +384,10 @@ T& Dyn_array<T>::operator=(Dyn_array &other) {
     m_capacity = other.capacity();
     m_ptr = new T[m_capacity];
     m_size = other.size();
-    return this;
+    for (int i = 0; i < m_size; ++i) {
+        m_ptr[i] = other[i];
+    }
+    return *this;
 }
 
 template<class T>
