@@ -15,6 +15,44 @@
 */
 template <class T>
 class Dyn_array {
+private:
+    class iterator {
+    public:
+        typedef iterator self_type;
+        typedef T value_type;
+        typedef T& reference;
+        typedef T* pointer;
+        typedef std::random_access_iterator_tag iterator_category;
+        typedef int difference_type;
+        
+        self_type();
+        self_type(pointer ptr);
+        self_type(const self_type& other);
+        ~self_type;
+        
+        self_type& operator=(const self_type& other);
+        bool operator==(const self_type& other) const;
+        bool operator!=(const self_type& other) const;
+        bool operator<(const self_type& other) const;
+        bool operator>(const self_type& other) const;
+        bool operator<=(const self_type& other) const;
+        bool operator>=(const self_type& other) const;
+        self_type& operator++(); //prefix
+        self_type operator++(int);  //postfix
+        self_type& operator--(); //prefix
+        self_type operator--(int);  //postfix
+        self_type& operator+=(difference_type);
+        self_type operator+(difference_type) const;
+        self_type& operator-=(difference_type);
+        self_type operator-(difference_type) const;
+        difference_type operator-(self_type) const;
+
+        reference operator*() const;
+        pointer operator->() const;
+        reference operator[](difference_type) const;
+    private:
+        pointer m_ptr;
+    };
     ///friend functions
     /**
     @brief operator<< overwriting << for cout function print all elements of dynamic array
@@ -151,6 +189,121 @@ public: ///operator overloading
     bool operator!=(Dyn_array &other);
     T& operator[](size_t index) const;
 };
+///iterator member functions for class member functions search private methods
+template <class T>
+Dyn_array<T>::iterator::iterator() {
+    m_ptr = NULL;
+}
+
+template <class T>
+Dyn_array<T>::iterator::iterator(pointer ptr) {
+    m_ptr = ptr;
+}
+
+template <class T>
+Dyn_array<T>::iterator::iterator(const iterator& other) {
+
+}
+
+~template <class T>
+Dyn_array<T>::iterator::iterator {
+
+}
+ 
+template <class T>
+typename Dyn_array<T>::iterator& Dyn_array<T>::iterator::operator=(const iterator& other) {
+
+}
+
+template <class T>
+bool Dyn_array<T>::iterator::operator==(const iterator& other) const {
+
+}
+
+template <class T>
+bool Dyn_array<T>::iterator::operator!=(const iterator& other) const {
+
+}
+
+template <class T>
+bool Dyn_array<T>::iterator::operator<(const iterator& other) const {
+
+}
+
+template <class T>
+bool Dyn_array<T>::iterator::operator>(const iterator& other) const {
+
+}
+
+template <class T>
+bool Dyn_array<T>::iterator::operator<=(const iterator& other) const {
+
+}
+
+template <class T>
+bool Dyn_array<T>::iterator::operator>=(const iterator& other) const {
+
+}
+
+template <class T>
+typename Dyn_array<T>::iterator& Dyn_array<T>::iterator::operator++() {
+
+} //prefix
+
+template <class T>
+typename Dyn_array<T>::iterator Dyn_array<T>::iterator::operator++(int){
+
+} //postfix
+
+template <class T>
+typename Dyn_array<T>::iterator& Dyn_array<T>::iterator::operator--() {
+
+} //prefix
+
+template <class T>
+typename Dyn_array<T>::iterator Dyn_array<T>::iterator::operator--(int) {
+
+}  //postfix
+
+template <class T>
+typename Dyn_array<T>::iterator& Dyn_array<T>::iterator::operator+=(int) {
+
+}
+
+template <class T>
+typename Dyn_array<T>::iterator Dyn_array<T>::iterator::operator+(int) const {
+
+}
+
+template <class T>
+typename Dyn_array<T>::iterator& Dyn_array<T>::iterator::operator-=(int) {
+
+}
+
+template <class T>
+typename Dyn_array<T>::iterator Dyn_array<T>::iterator::operator-(int) const {
+
+}
+
+template <class T>
+int Dyn_array<T>::iterator::operator-(iterator) const {
+
+}
+
+template <class T>
+T& Dyn_array<T>::iterator::operator*() const {
+
+}
+
+template <class T>
+T* Dyn_array<T>::iterator::operator->() const {
+
+}
+
+template <class T>
+T& Dyn_array<T>::iterator::operator[](int) const {
+
+}
 
 ///private methods
 template <class T>

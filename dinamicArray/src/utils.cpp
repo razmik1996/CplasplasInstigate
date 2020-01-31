@@ -1,6 +1,7 @@
 #include <iostream>
 #include <limits>
 #include <ctime>
+#include <cstdlib>
 
 void giveInput(int &input, int from, int to) {
 	while(true) {
@@ -14,7 +15,7 @@ void giveInput(int &input, int from, int to) {
 		}
 		if(-1 == input) {               ///exit when customer type -1
 			std::cout << "Good Bye!!!" << std::endl;
-			exit(0);
+			std::exit(0);
 		}
 		if(input < from || input > to) { ///validate input range
 			std::cout << "Invalid input please enter number from " 
@@ -54,8 +55,8 @@ void printArray(const int *array, const int &size) {
 }
 
 void randArray(int *array, const int &size) {
-	srand(time(NULL));
+	std::srand(time(NULL));
 	for(int i = 0; i < size; ++i) {
-		array[i] = rand() % 100;
+		array[i] = std::rand() % 100;
 	}
 }
