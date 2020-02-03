@@ -2,6 +2,7 @@
 #include <string>
 #include <algorithm>
 #include <vector>
+#include <list>
 #include "dynArray.hpp"
 #include "utils.hpp"
 
@@ -116,7 +117,7 @@ void miniProgramforTestAlgorithm() {
     for (int i = 0; i < SIZE; ++i) {
         array[i] = i;
     }
-    Dyn_array <int>vector(array, SIZE);
+    Dyn_array<int> vector(array, SIZE);
     if(vector.size() != SIZE) {
         std::cout << "vector created with m_size = SIZE but m_size is not SIZE" << std::endl;
         abort();
@@ -132,6 +133,16 @@ void miniProgramforTestAlgorithm() {
         std::cout << "After replace 4rd element of vector need to be 5" << std::endl;
         abort();
     }
+    std::vector<int> vec1 = {1, 5, 6, 7, 2, 3, 2};
+    Dyn_array<int> vec2(vec1.begin(), vec1.end());
+    std::cout << vec2 << std::endl;
+    std::list<int> list1;
+    list1.push_back(5);
+    list1.push_back(4);
+    list1.push_back(2);
+    list1.push_back(3);
+    Dyn_array<int> vec3(list1.begin(), list1.end());
+    std::cout << vec3 << std::endl;
 }
 
 int main() {

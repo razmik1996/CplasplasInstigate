@@ -56,14 +56,14 @@ public:
     ///friend functions
     /**
     @brief operator<< overwriting << for cout function print all elements of dynamic array
-    @param ostream &out - reference to ostream srteam
+    @param ostream &out - reference to ostream stream
     @param Dyn_array<T> &object - reference to print dynamic array
     */
     template<class S>
     friend std::ostream& operator<<(std::ostream &out, const Dyn_array<S> &object);
     /**
     @brief operator>> overwriting >> for cin function to insert all elements of dynamic array
-    @param ostream &out - reference to istream srteam
+    @param ostream &out - reference to istream stream
     @param Dyn_array<T> &object - reference to insert dynamic array
     */
     template<class S>
@@ -106,18 +106,20 @@ public: ///constructors and destructor
                                             std::random_access_iterator_tag>, bool> = true>
     Dyn_array(iter begin, iter end);
     */
+    template <typename iterators>
+    Dyn_array(iterators begin, iterators end);
     /**
-    @brief defalut constructor
+    @brief default constructor
     */
     Dyn_array();
     /**
-    @brief constructor for dinamic array with custom capacity and with default value
+    @brief constructor for dynamic array with custom capacity and with default value
     @param size_t capacity - size of array capacity = size + 1
     @param T def_value - default value for all elements
     */
     Dyn_array(const size_t capacity, const T def_value);
     /**
-    @brief constructor for dinamic array with custom capacity, size and with default value
+    @brief constructor for dynamic array with custom capacity, size and with default value
     @brief Set of allowed values SIZE < capacity and both > 0
     @param size_t SIZE - size of array
     @param size_t capacity - capacity of array
@@ -125,13 +127,13 @@ public: ///constructors and destructor
     */
     Dyn_array(const size_t SIZE, const size_t capacity, const T def_value);
     /**
-    @brief constructor for dinamic array with values from other array
+    @brief constructor for dynamic array with values from other array
     @param T* array - other array
     @param size_t SIZE - array SIZE
     */
     Dyn_array(const T* array, const size_t SIZE);
     /**
-    @brief constructor for dinamic array with values from other array
+    @brief constructor for dynamic array with values from other array
     @param size_t from - from element
     @param size_t to - to element
     */
@@ -436,20 +438,25 @@ Dyn_array<T>::Dyn_array(){
     m_capacity = 0;
 }
 
-/**
 template<class T>
-template<typename iter, 
-    std::enable_if_t<std::is_base_of_v<typename std::iterator_traits<iter>::iterator_category, 
-                    std::random_access_iterator_tag>, bool> = true>
-Dyn_array<T>::Dyn_array(iter begin, iter end) : m_size{ static_cast<size_type>(end - begin) }, m_capacity{ m_size }
-{
-    std::uninitialized_copy(begin, end, m_ptr = allocator.allocate(m_size));
-    first = array;
-    last = array + arr_size - 1;
+template<typename iterators>
+Dyn_array<T>::Dyn_array(iterators begin, iterators end) {
+    m_capacity = 2;
+    m_size = 0;
+    m_ptr = new T[m_capacity];
+    int i = 0;
+    for(auto it = begin; it != end; ++it) {
+        if(check_capacity()) {
+            new_capacity(m_capacity);
+            reallocate_and_copy();
+        }
+        m_ptr[i] = *it;
+        i++;
+        m_size++;
+    }
 }
-*/
 
-template <class T>
+template<class T>
 Dyn_array<T>::Dyn_array(const size_t SIZE, const T def_value) {
     m_capacity = SIZE + 1;
     m_ptr = new T[m_capacity];
