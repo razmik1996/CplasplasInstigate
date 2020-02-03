@@ -1,5 +1,10 @@
 \hypertarget{classDyn__array}{}\section{Dyn\+\_\+array$<$ T $>$ Class Template Reference}
 \label{classDyn__array}\index{Dyn\+\_\+array$<$ T $>$@{Dyn\+\_\+array$<$ T $>$}}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classDyn__array_1_1iterator}{iterator}
+\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,6 +25,23 @@
 \begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
 size\+\_\+t \hyperlink{classDyn__array_a36c5289ec13ee40366fe3b095b2347bf}{capacity} () const
 \begin{DoxyCompactList}\small\item\em public methods \end{DoxyCompactList}\item 
+\hyperlink{classDyn__array_1_1iterator}{iterator} \hyperlink{classDyn__array_ad6191fc9efb3505a13de70bc0cc5db3e}{begin} ()
+\begin{DoxyCompactList}\small\item\em return iterator to first element of dynamic array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDyn__array_aad61b279bf883aa67f904a93dc1622e1}\label{classDyn__array_aad61b279bf883aa67f904a93dc1622e1}} 
+const \hyperlink{classDyn__array_1_1iterator}{iterator} \hyperlink{classDyn__array_aad61b279bf883aa67f904a93dc1622e1}{cbegin} () const
+\begin{DoxyCompactList}\small\item\em return const iterator to first element of dynamic array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDyn__array_af728c3e6b4191f59dfea556dd506ccdc}\label{classDyn__array_af728c3e6b4191f59dfea556dd506ccdc}} 
+\hyperlink{classDyn__array_1_1iterator}{iterator} \hyperlink{classDyn__array_af728c3e6b4191f59dfea556dd506ccdc}{end} ()
+\begin{DoxyCompactList}\small\item\em return iterator to end + 1 element of dynamic array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDyn__array_a1f3d9e5788e2fd180e2769c3aa0690bd}\label{classDyn__array_a1f3d9e5788e2fd180e2769c3aa0690bd}} 
+const \hyperlink{classDyn__array_1_1iterator}{iterator} \hyperlink{classDyn__array_a1f3d9e5788e2fd180e2769c3aa0690bd}{cend} () const
+\begin{DoxyCompactList}\small\item\em return const iterator to end + 1 element of dynamic array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDyn__array_aeed6619e4e454972c86d3c5aee2b039d}\label{classDyn__array_aeed6619e4e454972c86d3c5aee2b039d}} 
+\hyperlink{classDyn__array_1_1iterator}{iterator} \hyperlink{classDyn__array_aeed6619e4e454972c86d3c5aee2b039d}{rbegin} ()
+\begin{DoxyCompactList}\small\item\em return reverse iterator to first(end) element of dynamic array \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDyn__array_a9b89ddcbd3c2ba21ee408827f61a98eb}\label{classDyn__array_a9b89ddcbd3c2ba21ee408827f61a98eb}} 
+\hyperlink{classDyn__array_1_1iterator}{iterator} \hyperlink{classDyn__array_a9b89ddcbd3c2ba21ee408827f61a98eb}{rend} ()
+\begin{DoxyCompactList}\small\item\em return reverse iterator to end + 1(fist -\/ 1) element of dynamic array \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDyn__array_abe033b7d651c88c537692a4ac9815355}\label{classDyn__array_abe033b7d651c88c537692a4ac9815355}} 
 size\+\_\+t \hyperlink{classDyn__array_abe033b7d651c88c537692a4ac9815355}{size} () const
 \begin{DoxyCompactList}\small\item\em return size \end{DoxyCompactList}\item 
@@ -82,12 +104,12 @@ constructors and destructor
 
 constructors and destructors
 
-defalut constructor \mbox{\Hypertarget{classDyn__array_a25117136ea5c69b0bee57d5c12b481b9}\label{classDyn__array_a25117136ea5c69b0bee57d5c12b481b9}} 
+TO DO template$<$typename iter, std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+base\+\_\+of\+\_\+v$<$typename std\+::iterator\+\_\+traits$<$iter$>$\+::iterator\+\_\+category, std\+::random\+\_\+access\+\_\+iterator\+\_\+tag$>$, bool$>$ = true$>$ \hyperlink{classDyn__array}{Dyn\+\_\+array(iter begin, iter end)}; defalut constructor \mbox{\Hypertarget{classDyn__array_a25117136ea5c69b0bee57d5c12b481b9}\label{classDyn__array_a25117136ea5c69b0bee57d5c12b481b9}} 
 \index{Dyn\+\_\+array@{Dyn\+\_\+array}!Dyn\+\_\+array@{Dyn\+\_\+array}}
 \index{Dyn\+\_\+array@{Dyn\+\_\+array}!Dyn\+\_\+array@{Dyn\+\_\+array}}
 \subsubsection{\texorpdfstring{Dyn\+\_\+array()}{Dyn\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-\hyperlink{classDyn__array}{Dyn\+\_\+array}$<$ T $>$\+::\hyperlink{classDyn__array}{Dyn\+\_\+array} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{capacity,  }\item[{const T}]{def\+\_\+value }\end{DoxyParamCaption})}
+\hyperlink{classDyn__array}{Dyn\+\_\+array}$<$ T $>$\+::\hyperlink{classDyn__array}{Dyn\+\_\+array} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{S\+I\+ZE,  }\item[{const T}]{def\+\_\+value }\end{DoxyParamCaption})}
 
 
 
@@ -97,10 +119,10 @@ constructor for dinamic array with custom capacity and with default value
 \begin{DoxyParams}{Parameters}
 {\em size\+\_\+t} & capacity -\/ size of array capacity = size + 1 \\
 \hline
-{\em T} & def\+\_\+value -\/ default value for all elements \\
+{\em T} & def\+\_\+value -\/ default value for all elements\\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classDyn__array_ab65231e8b87c5fbb58f22fb8a1d18ee3}\label{classDyn__array_ab65231e8b87c5fbb58f22fb8a1d18ee3}} 
+template$<$class T$>$ template$<$typename iter, std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+base\+\_\+of\+\_\+v$<$typename std\+::iterator\+\_\+traits$<$iter$>$\+::iterator\+\_\+category, std\+::random\+\_\+access\+\_\+iterator\+\_\+tag$>$, bool$>$ = true$>$ Dyn\+\_\+array$<$\+T$>$\+::\+Dyn\+\_\+array(iter begin, iter end) \+: m\+\_\+size\{ static\+\_\+cast$<$size\+\_\+type$>$(end -\/ begin) \}, m\+\_\+capacity\{ m\+\_\+size \} \{ std\+::uninitialized\+\_\+copy(begin, end, m\+\_\+ptr = allocator.\+allocate(m\+\_\+size)); first = array; last = array + arr\+\_\+size -\/ 1; \} \mbox{\Hypertarget{classDyn__array_ab65231e8b87c5fbb58f22fb8a1d18ee3}\label{classDyn__array_ab65231e8b87c5fbb58f22fb8a1d18ee3}} 
 \index{Dyn\+\_\+array@{Dyn\+\_\+array}!Dyn\+\_\+array@{Dyn\+\_\+array}}
 \index{Dyn\+\_\+array@{Dyn\+\_\+array}!Dyn\+\_\+array@{Dyn\+\_\+array}}
 \subsubsection{\texorpdfstring{Dyn\+\_\+array()}{Dyn\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
@@ -175,7 +197,18 @@ Copy constructor.
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{classDyn__array_a36c5289ec13ee40366fe3b095b2347bf}\label{classDyn__array_a36c5289ec13ee40366fe3b095b2347bf}} 
+\mbox{\Hypertarget{classDyn__array_ad6191fc9efb3505a13de70bc0cc5db3e}\label{classDyn__array_ad6191fc9efb3505a13de70bc0cc5db3e}} 
+\index{Dyn\+\_\+array@{Dyn\+\_\+array}!begin@{begin}}
+\index{begin@{begin}!Dyn\+\_\+array@{Dyn\+\_\+array}}
+\subsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\hyperlink{classDyn__array}{Dyn\+\_\+array}$<$ T $>$\+::\hyperlink{classDyn__array_1_1iterator}{iterator} \hyperlink{classDyn__array}{Dyn\+\_\+array}$<$ T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+return iterator to first element of dynamic array 
+
+public methods \mbox{\Hypertarget{classDyn__array_a36c5289ec13ee40366fe3b095b2347bf}\label{classDyn__array_a36c5289ec13ee40366fe3b095b2347bf}} 
 \index{Dyn\+\_\+array@{Dyn\+\_\+array}!capacity@{capacity}}
 \index{capacity@{capacity}!Dyn\+\_\+array@{Dyn\+\_\+array}}
 \subsubsection{\texorpdfstring{capacity()}{capacity()}}

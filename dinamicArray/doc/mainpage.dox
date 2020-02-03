@@ -8,15 +8,17 @@
  * 
  * \section Testing
  * 
- * Step 1 - Creating dynamicArray object*\n
- * Step 2 - pushing 5 and printing size, capacity and first element\n
- * Step 3 - pushing 8 and printing size and capacity\n
- * Step 4 - pushing 20 and printing size and capacity\n
- * Step 5 - pushing 15 and printing size and capacity\n
- * Step 6 - pushing 13 and printing size and capacity\n
- * Step 7 - pushing tree 3 and printing size, capacity and elements of dynamicArray\n
- * Step 8 - poping element and print size, capacity and elements of dynamicArray\n
- * Step 9 - shrinking to fit printing size, capacity and elements of dynamicArray\n
+ * Step 1 - Creating vector by using array elements awaited SIZE is 10 capacity is 11\n
+ * Step 2 - Replace 5 instead 4 by using std::replace from standard library awaited value for vector[4] is 5\n
+ * Step 3 - Creating dynamicArray object by using all constructors*\n
+ * Step 4 - pushing 5 and printing size, capacity and first element\n
+ * Step 5 - pushing 8 and printing size and capacity\n
+ * Step 6 - pushing 20 and printing size and capacity\n
+ * Step 7 - pushing 15 and printing size and capacity\n
+ * Step 8 - pushing 13 and printing size and capacity\n
+ * Step 9 - pushing tree 3 and printing size, capacity and elements of dynamicArray\n
+ * Step 10 - poping element and print size, capacity and elements of dynamicArray\n
+ * Step 11 - shrinking to fit printing size, capacity and elements of dynamicArray\n
  *
  * \section Installation
  *

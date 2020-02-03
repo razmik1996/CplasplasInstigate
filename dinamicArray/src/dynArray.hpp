@@ -15,7 +15,7 @@
 */
 template <class T>
 class Dyn_array {
-private:
+public:
     class iterator {
     public:
         typedef iterator self_type;
@@ -25,27 +25,27 @@ private:
         typedef std::random_access_iterator_tag iterator_category;
         typedef int difference_type;
         
-        self_type();
-        self_type(pointer ptr);
-        self_type(const self_type& other);
-        ~self_type;
+        iterator();
+        iterator(pointer ptr);
+        iterator(const iterator& other);
+        ~iterator();
         
-        self_type& operator=(const self_type& other);
-        bool operator==(const self_type& other) const;
-        bool operator!=(const self_type& other) const;
-        bool operator<(const self_type& other) const;
-        bool operator>(const self_type& other) const;
-        bool operator<=(const self_type& other) const;
-        bool operator>=(const self_type& other) const;
-        self_type& operator++(); //prefix
-        self_type operator++(int);  //postfix
-        self_type& operator--(); //prefix
-        self_type operator--(int);  //postfix
-        self_type& operator+=(difference_type);
-        self_type operator+(difference_type) const;
-        self_type& operator-=(difference_type);
-        self_type operator-(difference_type) const;
-        difference_type operator-(self_type) const;
+        iterator& operator=(const iterator& other);
+        bool operator==(const iterator& other) const;
+        bool operator!=(const iterator& other) const;
+        bool operator<(const iterator& other) const;
+        bool operator>(const iterator& other) const;
+        bool operator<=(const iterator& other) const;
+        bool operator>=(const iterator& other) const;
+        iterator& operator++(); //prefix
+        iterator operator++(int);  //postfix
+        iterator& operator--(); //prefix
+        iterator operator--(int);  //postfix
+        iterator& operator+=(difference_type);
+        iterator operator+(difference_type) const;
+        iterator& operator-=(difference_type);
+        iterator operator-(difference_type) const;
+        difference_type operator-(iterator&) const;
 
         reference operator*() const;
         pointer operator->() const;
@@ -78,7 +78,7 @@ private: ///private methods
     @param capacity - if you want allocate custom capacity give new capacity 
                         or give m_capacity if you want just multiply
     */
-    size_t& new_capacity(const size_t capacity);
+    size_t new_capacity(const size_t capacity);
     /**
     @brief just reallocate and copy old values
     */
@@ -88,7 +88,7 @@ private: ///private methods
     @param size_t index - position for adding value
     @param T& value - reference to value
     */
-    size_t& new_capacity_insert(const size_t index, const T& value);
+    size_t new_capacity_insert(const size_t index, const T& value);
     /**
     @brief check equal or not size == capacity
     */
@@ -98,8 +98,14 @@ private: ///private methods
     @param T* ptr - pointer to old array to value
     @param size_t index - position for adding value
     */
-    size_t& copy_for_insert(T* ptr, const size_t index);
+    iterator& copy_for_insert(T* ptr, const size_t index);
 public: ///constructors and destructor
+    /** TO DO
+    template<typename iter, 
+         std::enable_if_t<std::is_base_of_v<typename std::iterator_traits<iter>::iterator_category, 
+                                            std::random_access_iterator_tag>, bool> = true>
+    Dyn_array(iter begin, iter end);
+    */
     /**
     @brief defalut constructor
     */
@@ -144,6 +150,30 @@ public: ///public methods
     @brief return capacity
     */
     size_t capacity() const;
+    /**
+    @brief return iterator to first element of dynamic array
+    */
+    iterator begin();
+    /**
+    @brief return const iterator to first element of dynamic array
+    */
+    const iterator cbegin() const;
+    /**
+    @brief return iterator to end + 1 element of dynamic array
+    */
+    iterator end();
+    /**
+    @brief return const iterator to end + 1 element of dynamic array
+    */
+    const iterator cend() const;
+    /**
+    @brief return reverse iterator to first(end) element of dynamic array
+    */
+    iterator rbegin();
+    /**
+    @brief return reverse iterator to end + 1(fist - 1) element of dynamic array
+    */
+    iterator rend();
     /**
     @brief return size
     */
@@ -196,118 +226,153 @@ Dyn_array<T>::iterator::iterator() {
 }
 
 template <class T>
-Dyn_array<T>::iterator::iterator(pointer ptr) {
+Dyn_array<T>::iterator::iterator(T* ptr) {
     m_ptr = ptr;
 }
 
 template <class T>
-Dyn_array<T>::iterator::iterator(const iterator& other) {
-
+Dyn_array<T>::iterator::iterator(const Dyn_array<T>::iterator& other) {
+    m_ptr = other.m_ptr;
 }
 
-~template <class T>
-Dyn_array<T>::iterator::iterator {
+template <class T>
+Dyn_array<T>::iterator::~iterator() {
 
 }
  
 template <class T>
 typename Dyn_array<T>::iterator& Dyn_array<T>::iterator::operator=(const iterator& other) {
-
+    if (m_ptr != other.m_ptr) {
+        m_ptr = other.m_ptr;
+    }
+    return *this;
 }
 
 template <class T>
 bool Dyn_array<T>::iterator::operator==(const iterator& other) const {
-
+    if (m_ptr == other.m_ptr) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 template <class T>
 bool Dyn_array<T>::iterator::operator!=(const iterator& other) const {
-
+    if (m_ptr != other.m_ptr) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 template <class T>
 bool Dyn_array<T>::iterator::operator<(const iterator& other) const {
-
+    if (m_ptr < other.m_ptr) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 template <class T>
 bool Dyn_array<T>::iterator::operator>(const iterator& other) const {
-
+    if (m_ptr > other.m_ptr) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 template <class T>
 bool Dyn_array<T>::iterator::operator<=(const iterator& other) const {
-
+    if (m_ptr <= other.m_ptr) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 template <class T>
 bool Dyn_array<T>::iterator::operator>=(const iterator& other) const {
-
+    if (m_ptr >= other.m_ptr) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
 template <class T>
 typename Dyn_array<T>::iterator& Dyn_array<T>::iterator::operator++() {
-
+    m_ptr++;
+    return *this;
 } //prefix
 
 template <class T>
 typename Dyn_array<T>::iterator Dyn_array<T>::iterator::operator++(int){
-
+    T* tmp = m_ptr;
+    m_ptr++;
+    return iterator(tmp);
 } //postfix
 
 template <class T>
 typename Dyn_array<T>::iterator& Dyn_array<T>::iterator::operator--() {
-
+    m_ptr--;
+    return *this;
 } //prefix
 
 template <class T>
 typename Dyn_array<T>::iterator Dyn_array<T>::iterator::operator--(int) {
-
+    T* tmp = m_ptr;
+    m_ptr--;
+    return iterator(tmp);
 }  //postfix
 
 template <class T>
-typename Dyn_array<T>::iterator& Dyn_array<T>::iterator::operator+=(int) {
-
+typename Dyn_array<T>::iterator& Dyn_array<T>::iterator::operator+=(int value) {
+    m_ptr = m_ptr + value;
+    return *this;
 }
 
 template <class T>
-typename Dyn_array<T>::iterator Dyn_array<T>::iterator::operator+(int) const {
-
+typename Dyn_array<T>::iterator Dyn_array<T>::iterator::operator+(int value) const {
+    return *(this->m_ptr + value);
 }
 
 template <class T>
-typename Dyn_array<T>::iterator& Dyn_array<T>::iterator::operator-=(int) {
-
+typename Dyn_array<T>::iterator& Dyn_array<T>::iterator::operator-=(int value) {
+    m_ptr = m_ptr - value;
+    return *this;
 }
 
 template <class T>
-typename Dyn_array<T>::iterator Dyn_array<T>::iterator::operator-(int) const {
-
+typename Dyn_array<T>::iterator Dyn_array<T>::iterator::operator-(int value) const {
+    return *(this->m_ptr - value);
 }
 
 template <class T>
-int Dyn_array<T>::iterator::operator-(iterator) const {
-
+int Dyn_array<T>::iterator::operator-(iterator &other) const {
+    return (m_ptr - other.m_ptr);
 }
 
 template <class T>
 T& Dyn_array<T>::iterator::operator*() const {
-
+    return *m_ptr;
 }
 
 template <class T>
 T* Dyn_array<T>::iterator::operator->() const {
-
+    return m_ptr;
 }
 
 template <class T>
-T& Dyn_array<T>::iterator::operator[](int) const {
-
+T& Dyn_array<T>::iterator::operator[](int value) const {
+    return *(m_ptr + value);
 }
 
 ///private methods
 template <class T>
-size_t& Dyn_array<T>::new_capacity(const size_t capacity) {
+size_t Dyn_array<T>::new_capacity(const size_t capacity) {
     if (m_capacity < 2) {
         m_capacity = 2;
     } else {
@@ -316,6 +381,7 @@ size_t& Dyn_array<T>::new_capacity(const size_t capacity) {
             m_capacity = (int)(m_capacity * coeficent);
         }
     }
+    return m_capacity;
 }
 
 template <class T>
@@ -339,7 +405,7 @@ size_t Dyn_array<T>::reallocate_and_copy() {
 }
 
 template <class T>
-size_t& Dyn_array<T>::copy_for_insert(T* ptr, const size_t index) {
+typename Dyn_array<T>::iterator& Dyn_array<T>::copy_for_insert(T* ptr, const size_t index) {
     for (int i = 0; i < m_size; ++i) {
         if (i < index) {
             m_ptr[i] = ptr[i];
@@ -347,10 +413,11 @@ size_t& Dyn_array<T>::copy_for_insert(T* ptr, const size_t index) {
             m_ptr[i+1] = ptr[i];
         }
     }
+    return iterator(index);
 }
     
 template <class T>
-size_t& Dyn_array<T>::new_capacity_insert(const size_t index, const T& value) {
+size_t Dyn_array<T>::new_capacity_insert(const size_t index, const T& value) {
     new_capacity(m_capacity);
     T* tmp = m_ptr;
     m_ptr = new T[m_capacity];
@@ -358,6 +425,7 @@ size_t& Dyn_array<T>::new_capacity_insert(const size_t index, const T& value) {
     m_ptr[index] = value;
     ++m_size;
     delete[] tmp;
+    return m_capacity;
 }
 
 ///constructors and destructors
@@ -367,6 +435,19 @@ Dyn_array<T>::Dyn_array(){
     m_size = 0;
     m_capacity = 0;
 }
+
+/**
+template<class T>
+template<typename iter, 
+    std::enable_if_t<std::is_base_of_v<typename std::iterator_traits<iter>::iterator_category, 
+                    std::random_access_iterator_tag>, bool> = true>
+Dyn_array<T>::Dyn_array(iter begin, iter end) : m_size{ static_cast<size_type>(end - begin) }, m_capacity{ m_size }
+{
+    std::uninitialized_copy(begin, end, m_ptr = allocator.allocate(m_size));
+    first = array;
+    last = array + arr_size - 1;
+}
+*/
 
 template <class T>
 Dyn_array<T>::Dyn_array(const size_t SIZE, const T def_value) {
@@ -394,6 +475,7 @@ Dyn_array<T>::Dyn_array(const size_t SIZE, const size_t capacity, const T def_va
 
 template <class T>
 Dyn_array<T>::Dyn_array(const T* array, const size_t SIZE) {
+    m_size = SIZE;
     m_capacity = SIZE + 1;
     m_ptr = new T[m_capacity];
     for (int i = 0; i < SIZE; ++i) {
@@ -404,6 +486,7 @@ Dyn_array<T>::Dyn_array(const T* array, const size_t SIZE) {
 template <class T>
 Dyn_array<T>::Dyn_array(const T* array, size_t from, const size_t to) {
     size_t size = to - from;
+    m_size = size;
     m_capacity = size + 1;
     m_ptr = new T[m_capacity];
     for (int i = 0; i < size; ++i) {
@@ -427,6 +510,36 @@ Dyn_array<T>::~Dyn_array() {
 }
 
 ///public methods
+template <class T>
+typename Dyn_array<T>::iterator Dyn_array<T>::begin() {
+    return iterator(m_ptr);
+}
+
+template <class T>
+const typename Dyn_array<T>::iterator Dyn_array<T>::cbegin() const {
+    return iterator(m_ptr);
+}
+
+template <class T>
+typename Dyn_array<T>::iterator Dyn_array<T>::end() {
+    return iterator(m_ptr + m_size);
+}
+
+template <class T>
+const typename Dyn_array<T>::iterator Dyn_array<T>::cend() const {
+    return iterator(m_ptr + m_size);
+}
+
+template <class T>
+typename Dyn_array<T>::iterator Dyn_array<T>::rbegin() {
+    return iterator(m_ptr + m_size - 1);
+}
+
+template <class T>
+typename Dyn_array<T>::iterator Dyn_array<T>::rend() {
+    return iterator(m_ptr - 1);
+}
+
 template <class T>
 size_t Dyn_array<T>::capacity() const {
     return m_capacity;

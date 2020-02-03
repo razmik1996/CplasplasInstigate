@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['randarray',['randArray',['../utils_8hpp.html#aabe5c1a670e6bcb93b2de6452d2fd963',1,'utils.cpp']]],
-  ['reserve',['reserve',['../classDyn__array.html#a8cc1e876bc20ce13490898be4bdd7882',1,'Dyn_array']]]
+  ['operator_3c_3c',['operator&lt;&lt;',['../dynArray_8hpp.html#af425b5ed4ee13a93985fb31c1b643655',1,'dynArray.hpp']]],
+  ['operator_3d',['operator=',['../classDyn__array.html#a3038b3c6558794e168a7a5d7f58a3701',1,'Dyn_array']]]
 ];
