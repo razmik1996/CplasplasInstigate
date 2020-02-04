@@ -98,7 +98,7 @@ private: ///private methods
     @param T* ptr - pointer to old array to value
     @param size_t index - position for adding value
     */
-    iterator& copy_for_insert(T* ptr, const size_t index);
+    const size_t copy_for_insert(T* ptr, const size_t index);
 public: ///constructors and destructor
     /** TO DO
     template<typename iter, 
@@ -117,7 +117,7 @@ public: ///constructors and destructor
     @param size_t capacity - size of array capacity = size + 1
     @param T def_value - default value for all elements
     */
-    Dyn_array(const size_t capacity, const T def_value);
+    Dyn_array(const size_t size, const T def_value);
     /**
     @brief constructor for dynamic array with custom capacity, size and with default value
     @brief Set of allowed values SIZE < capacity and both > 0
@@ -407,7 +407,7 @@ size_t Dyn_array<T>::reallocate_and_copy() {
 }
 
 template <class T>
-typename Dyn_array<T>::iterator& Dyn_array<T>::copy_for_insert(T* ptr, const size_t index) {
+const size_t Dyn_array<T>::copy_for_insert(T* ptr, const size_t index) {
     for (int i = 0; i < m_size; ++i) {
         if (i < index) {
             m_ptr[i] = ptr[i];
@@ -415,7 +415,7 @@ typename Dyn_array<T>::iterator& Dyn_array<T>::copy_for_insert(T* ptr, const siz
             m_ptr[i+1] = ptr[i];
         }
     }
-    return iterator(index);
+    return index;
 }
     
 template <class T>
@@ -621,7 +621,7 @@ bool Dyn_array<T>::pop_back() {
 template <class T>
 T* Dyn_array<T>::insert(size_t index, const T& value) {
     if (check_capacity()) {
-        new_capacity_insert(index, &value);
+        new_capacity_insert(index, value);
     } else if(index == m_size) {
         push_back(value);
     } else {
