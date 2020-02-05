@@ -9,5 +9,6 @@ int main() {
     test_algorithms();
     std::cout << "Algorithms tested successfully" << std::endl;
     std::cout << "All is okay..." << std::endl;
+    test_my_algorithm();
     return 0;
 }

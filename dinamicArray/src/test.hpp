@@ -8,10 +8,18 @@
 #include <cassert>
 #include "dynArray.hpp"
 #include "utils.hpp"
+#include "helperMetafunctions.hpp"
 
 void test_constructors();
 void test_member_functions();
 void test_algorithms();
+template <typename T>
+typename EnableIf<!std::is_integral<T>::value, void>::type
+print_container(T container);
+template <typename t>
+typename EnableIf<IsSame<t, int>::value, int>::type
+only_int_print_val(t value);
+void test_my_algorithm();
 
 /**
 @brief test all constructors
@@ -119,6 +127,40 @@ void test_algorithms() {
     assert(SIZE == vector.size());
     std::replace(vector.begin(), vector.end(), 4, 5);
     assert(vector[4] == 5);
+}
+
+void test_my_algorithm() {
+    std::vector<int> vec1 = {1, 5, 6, 7, 2, 3, 2};
+    ///Constructor with begin end vector iterators
+    Dyn_array<int> vec2(vec1.begin(), vec1.end());
+    std::list<int> list1;
+    list1.push_back(5);
+    list1.push_back(4);
+    list1.push_back(2);
+    list1.push_back(3);
+
+    print_container(vec2);
+    print_container(vec1);
+    print_container(list1); 
+//    print_container("3");
+    only_int_print_val(5);
+//    only_int_print_val("5");
+}
+
+template <typename T>
+typename EnableIf<!std::is_integral<T>::value, void>::type
+print_container(T container) {
+    std::cout << "Values:{ ";
+    for (auto value : container) {
+        std::cout << value << " ";
+    }
+    std::cout << "}\n";
+}
+
+template <typename t>
+typename EnableIf<IsSame<t, int>::value, int>::type
+only_int_print_val(t value) {
+    std::cout << value << std::endl;
 }
 
 #endif // TEST_HPP

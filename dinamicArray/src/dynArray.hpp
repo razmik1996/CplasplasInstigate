@@ -100,14 +100,9 @@ private: ///private methods
     */
     const size_t copy_for_insert(T* ptr, const size_t index);
 public: ///constructors and destructor
-    /** TO DO
-    template<typename iter, 
-         std::enable_if_t<std::is_base_of_v<typename std::iterator_traits<iter>::iterator_category, 
-                                            std::random_access_iterator_tag>, bool> = true>
+//    template<typename iter, std::enable_if<std::is_base_of<typename std::iterator_traits<iter>::iterator_category, std::random_access_iterator_tag>, bool> = true>
+    template<typename iter> 
     Dyn_array(iter begin, iter end);
-    */
-    template <typename iterators>
-    Dyn_array(iterators begin, iterators end);
     /**
     @brief default constructor
     */
@@ -439,8 +434,10 @@ Dyn_array<T>::Dyn_array(){
 }
 
 template<class T>
-template<typename iterators>
-Dyn_array<T>::Dyn_array(iterators begin, iterators end) {
+//template<typename iter, std::enable_if<std::is_base_of<typename std::iterator_traits<iter>::iterator_category,std::random_access_iterator_tag>, bool> = true>
+//template<typename iter, EnableIf<, Dyn_array&>>
+template<typename iter>
+Dyn_array<T>::Dyn_array(iter begin, iter end) {
     m_capacity = 2;
     m_size = 0;
     m_ptr = new T[m_capacity];
