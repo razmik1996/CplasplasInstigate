@@ -8,7 +8,8 @@ int main() {
     std::cout << "Testing member functions was successful" << std::endl;
     test_algorithms();
     std::cout << "Algorithms tested successfully" << std::endl;
-    std::cout << "All is okay..." << std::endl;
     test_my_algorithm();
+    std::cout << "My algorithm is working correctly" << std::endl;
+    std::cout << "All is okay..." << std::endl;
     return 0;
 }

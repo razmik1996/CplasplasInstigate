@@ -10,20 +10,37 @@
 #include "utils.hpp"
 #include "helperMetafunctions.hpp"
 
+/**
+@brief test all constructors dynamic array
+*/
 void test_constructors();
+/**
+@brief test all member functions
+*/
 void test_member_functions();
+/**
+@brief test iterators with stl algorithms
+*/
 void test_algorithms();
+/**
+@brief an algorithm that can display all the elements of a dynamic array if
+an array having an iterator. The algorithm works if a passed type is not simple
+*/
 template <typename T>
 typename EnableIf<!std::is_integral<T>::value, void>::type
 print_container(T container);
+/**
+@brief This template can create an instance if the passed type is only and
+only integer
+*/
 template <typename t>
 typename EnableIf<IsSame<t, int>::value, int>::type
 only_int_print_val(t value);
+/**
+@brief testing templates
+*/
 void test_my_algorithm();
 
-/**
-@brief test all constructors
-*/
 void test_constructors() {
     const int SIZE = 10;
     const int DEF_CAPACITY = 16;
@@ -78,31 +95,31 @@ void test_member_functions() {
     Dyn_array<int> vector;
     ///testing is empty
     assert(vector.is_empty());
-    ///pushing 5 to dinamic array
+    ///pushing 5 to dynamic array
     vector.push_back(5);
     assert(5 == vector[0]);
     assert(1 == vector.size());
     assert(2 == vector.capacity());
-    ///Pushing 8 to dinamic array
+    ///Pushing 8 to dynamic array
     vector.push_back(8);
     assert(8 == vector[1]);
     assert(2 == vector.size());
-    ///Pushing 20 to dinamic array"
+    ///Pushing 20 to dynamic array"
     vector.push_back(20);
     assert(20 == vector[2]);
     assert(3 == vector.size());
-    ///Pushing 15 to dinamic array"
+    ///Pushing 15 to dynamic array"
     vector.push_back(15);
-    ///Pushing 13 to dinamic array"
+    ///Pushing 13 to dynamic array"
     vector.push_back(13);
-    ///Pushing 3 to dinamic array"
+    ///Pushing 3 to dynamic array"
     vector.push_back(3);
-    ///Pushing 3 to dinamic array"
+    ///Pushing 3 to dynamic array"
     vector.push_back(3);
-    ///Pushing 3 to dinamic array"
+    ///Pushing 3 to dynamic array"
     vector.push_back(3);
     assert(8 == vector.size());
-    ///poping last element from dinamic array
+    ///poping last element from dynamic array
     vector.pop_back();
     assert(7 == vector.size());
     ///using shrink to fit
@@ -142,9 +159,9 @@ void test_my_algorithm() {
     print_container(vec2);
     print_container(vec1);
     print_container(list1); 
-//    print_container("3");
+//    print_container("3"); ///can't work because passed value is string
     only_int_print_val(5);
-//    only_int_print_val("5");
+//    only_int_print_val("5"); ///can't work because passed value is string
 }
 
 template <typename T>
@@ -160,7 +177,7 @@ print_container(T container) {
 template <typename t>
 typename EnableIf<IsSame<t, int>::value, int>::type
 only_int_print_val(t value) {
-    std::cout << value << std::endl;
+    std::cout << "Value = "<< value << std::endl;
 }
 
 #endif // TEST_HPP

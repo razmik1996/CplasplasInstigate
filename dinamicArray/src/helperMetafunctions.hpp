@@ -1,3 +1,6 @@
+#ifndef HELPERMETAFUNCTIONS_HPP
+#define HELPERMETAFUNCTIONS_HPP
+
 template <bool condition, typename Type>
 struct EnableIf;
  
@@ -18,3 +21,5 @@ struct IsSame<T, T>
 {
     static constexpr bool value = true;
 };
+
+#endif ///HELPERMETAFUNCTIONS_HPP

@@ -2,6 +2,7 @@ class dynamic array + Iterator.
 
 /////////////////////////////////////////////////////////////////////////////////////////
 
+To see what I tested look /doc/mainpage.dox or see documentation mainpage
 For documentation open html file /doc/html/index.html
 Example firefox doc/html/index.html
 You can run program after compiling just type make

@@ -8,16 +8,19 @@ class \hyperlink{classDyn__array_1_1iterator}{iterator}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{classDyn__array_a3afc99260021fc0a0861c7a6dffa7dcb}{Dyn\+\_\+array} ()
+\mbox{\Hypertarget{classDyn__array_ae1a82cc9f04008331ef114f82ce1943a}\label{classDyn__array_ae1a82cc9f04008331ef114f82ce1943a}} 
+{\footnotesize template$<$typename iter $>$ }\\\hyperlink{classDyn__array_ae1a82cc9f04008331ef114f82ce1943a}{Dyn\+\_\+array} (iter \hyperlink{classDyn__array_ad6191fc9efb3505a13de70bc0cc5db3e}{begin}, iter \hyperlink{classDyn__array_af728c3e6b4191f59dfea556dd506ccdc}{end})
 \begin{DoxyCompactList}\small\item\em constructors and destructor \end{DoxyCompactList}\item 
-\hyperlink{classDyn__array_a25117136ea5c69b0bee57d5c12b481b9}{Dyn\+\_\+array} (const size\+\_\+t \hyperlink{classDyn__array_a36c5289ec13ee40366fe3b095b2347bf}{capacity}, const T def\+\_\+value)
-\begin{DoxyCompactList}\small\item\em constructor for dinamic array with custom capacity and with default value \end{DoxyCompactList}\item 
+\hyperlink{classDyn__array_a3afc99260021fc0a0861c7a6dffa7dcb}{Dyn\+\_\+array} ()
+\begin{DoxyCompactList}\small\item\em default constructor \end{DoxyCompactList}\item 
+\hyperlink{classDyn__array_a3abedb7c622a7065a133741ca1e20dde}{Dyn\+\_\+array} (const size\+\_\+t \hyperlink{classDyn__array_abe033b7d651c88c537692a4ac9815355}{size}, const T def\+\_\+value)
+\begin{DoxyCompactList}\small\item\em constructor for dynamic array with custom capacity and with default value \end{DoxyCompactList}\item 
 \hyperlink{classDyn__array_ab65231e8b87c5fbb58f22fb8a1d18ee3}{Dyn\+\_\+array} (const size\+\_\+t S\+I\+ZE, const size\+\_\+t \hyperlink{classDyn__array_a36c5289ec13ee40366fe3b095b2347bf}{capacity}, const T def\+\_\+value)
-\begin{DoxyCompactList}\small\item\em constructor for dinamic array with custom capacity, size and with default value \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em constructor for dynamic array with custom capacity, size and with default value \end{DoxyCompactList}\item 
 \hyperlink{classDyn__array_a732dc944171bd9abbf0086af367e3202}{Dyn\+\_\+array} (const T $\ast$array, const size\+\_\+t S\+I\+ZE)
-\begin{DoxyCompactList}\small\item\em constructor for dinamic array with values from other array \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em constructor for dynamic array with values from other array \end{DoxyCompactList}\item 
 \hyperlink{classDyn__array_a7fa28275bd20add3643eeab60e06a431}{Dyn\+\_\+array} (const T $\ast$array, size\+\_\+t from, const size\+\_\+t to)
-\begin{DoxyCompactList}\small\item\em constructor for dinamic array with values from other array \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em constructor for dynamic array with values from other array \end{DoxyCompactList}\item 
 \hyperlink{classDyn__array_a83d19f61fc7cef07e8125911729fd3bf}{Dyn\+\_\+array} (const \hyperlink{classDyn__array}{Dyn\+\_\+array} \&other)
 \begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDyn__array_ae614e37ca129444d7125483d461fa8d5}\label{classDyn__array_ae614e37ca129444d7125483d461fa8d5}} 
@@ -100,29 +103,27 @@ T \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t index) const
 
 
 
-constructors and destructor 
+default constructor 
 
-constructors and destructors
-
-TO DO template$<$typename iter, std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+base\+\_\+of\+\_\+v$<$typename std\+::iterator\+\_\+traits$<$iter$>$\+::iterator\+\_\+category, std\+::random\+\_\+access\+\_\+iterator\+\_\+tag$>$, bool$>$ = true$>$ \hyperlink{classDyn__array}{Dyn\+\_\+array(iter begin, iter end)}; defalut constructor \mbox{\Hypertarget{classDyn__array_a25117136ea5c69b0bee57d5c12b481b9}\label{classDyn__array_a25117136ea5c69b0bee57d5c12b481b9}} 
+constructors and destructors \mbox{\Hypertarget{classDyn__array_a3abedb7c622a7065a133741ca1e20dde}\label{classDyn__array_a3abedb7c622a7065a133741ca1e20dde}} 
 \index{Dyn\+\_\+array@{Dyn\+\_\+array}!Dyn\+\_\+array@{Dyn\+\_\+array}}
 \index{Dyn\+\_\+array@{Dyn\+\_\+array}!Dyn\+\_\+array@{Dyn\+\_\+array}}
 \subsubsection{\texorpdfstring{Dyn\+\_\+array()}{Dyn\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-\hyperlink{classDyn__array}{Dyn\+\_\+array}$<$ T $>$\+::\hyperlink{classDyn__array}{Dyn\+\_\+array} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{S\+I\+ZE,  }\item[{const T}]{def\+\_\+value }\end{DoxyParamCaption})}
+\hyperlink{classDyn__array}{Dyn\+\_\+array}$<$ T $>$\+::\hyperlink{classDyn__array}{Dyn\+\_\+array} (\begin{DoxyParamCaption}\item[{const size\+\_\+t}]{size,  }\item[{const T}]{def\+\_\+value }\end{DoxyParamCaption})}
 
 
 
-constructor for dinamic array with custom capacity and with default value 
+constructor for dynamic array with custom capacity and with default value 
 
 
 \begin{DoxyParams}{Parameters}
 {\em size\+\_\+t} & capacity -\/ size of array capacity = size + 1 \\
 \hline
-{\em T} & def\+\_\+value -\/ default value for all elements\\
+{\em T} & def\+\_\+value -\/ default value for all elements \\
 \hline
 \end{DoxyParams}
-template$<$class T$>$ template$<$typename iter, std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+base\+\_\+of\+\_\+v$<$typename std\+::iterator\+\_\+traits$<$iter$>$\+::iterator\+\_\+category, std\+::random\+\_\+access\+\_\+iterator\+\_\+tag$>$, bool$>$ = true$>$ Dyn\+\_\+array$<$\+T$>$\+::\+Dyn\+\_\+array(iter begin, iter end) \+: m\+\_\+size\{ static\+\_\+cast$<$size\+\_\+type$>$(end -\/ begin) \}, m\+\_\+capacity\{ m\+\_\+size \} \{ std\+::uninitialized\+\_\+copy(begin, end, m\+\_\+ptr = allocator.\+allocate(m\+\_\+size)); first = array; last = array + arr\+\_\+size -\/ 1; \} \mbox{\Hypertarget{classDyn__array_ab65231e8b87c5fbb58f22fb8a1d18ee3}\label{classDyn__array_ab65231e8b87c5fbb58f22fb8a1d18ee3}} 
+\mbox{\Hypertarget{classDyn__array_ab65231e8b87c5fbb58f22fb8a1d18ee3}\label{classDyn__array_ab65231e8b87c5fbb58f22fb8a1d18ee3}} 
 \index{Dyn\+\_\+array@{Dyn\+\_\+array}!Dyn\+\_\+array@{Dyn\+\_\+array}}
 \index{Dyn\+\_\+array@{Dyn\+\_\+array}!Dyn\+\_\+array@{Dyn\+\_\+array}}
 \subsubsection{\texorpdfstring{Dyn\+\_\+array()}{Dyn\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
@@ -131,7 +132,7 @@ template$<$class T$>$ template$<$typename iter, std\+::enable\+\_\+if\+\_\+t$<$s
 
 
 
-constructor for dinamic array with custom capacity, size and with default value 
+constructor for dynamic array with custom capacity, size and with default value 
 
 Set of allowed values S\+I\+ZE $<$ capacity and both $>$ 0 
 \begin{DoxyParams}{Parameters}
@@ -151,7 +152,7 @@ Set of allowed values S\+I\+ZE $<$ capacity and both $>$ 0
 
 
 
-constructor for dinamic array with values from other array 
+constructor for dynamic array with values from other array 
 
 
 \begin{DoxyParams}{Parameters}
@@ -169,7 +170,7 @@ constructor for dinamic array with values from other array
 
 
 
-constructor for dinamic array with values from other array 
+constructor for dynamic array with values from other array 
 
 
 \begin{DoxyParams}{Parameters}
@@ -286,7 +287,7 @@ friend functions
 
 operator$<$$<$ overwriting $<$$<$ for cout function print all elements of dynamic array 
 \begin{DoxyParams}{Parameters}
-{\em ostream} & \&out -\/ reference to ostream srteam \\
+{\em ostream} & \&out -\/ reference to ostream stream \\
 \hline
 {\em Dyn\+\_\+array$<$\+T$>$} & \&object -\/ reference to print dynamic array \\
 \hline
@@ -305,7 +306,7 @@ operator$>$$>$ overwriting $>$$>$ for cin function to insert all elements of dyn
 
 
 \begin{DoxyParams}{Parameters}
-{\em ostream} & \&out -\/ reference to istream srteam \\
+{\em ostream} & \&out -\/ reference to istream stream \\
 \hline
 {\em Dyn\+\_\+array$<$\+T$>$} & \&object -\/ reference to insert dynamic array \\
 \hline

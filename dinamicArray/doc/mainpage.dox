@@ -3,22 +3,49 @@
  * \section Introduction
  *
  * Class dynamic array.
- * You can create aray which can change size as required
+ * You can create array which can change size as required
  * array has push_back function which can add new element from front
- * 
- * \section Testing
+ *
+ * \section test_1 Constructors test
+ *
+ * Step 1 - Creating vector with default constructor and checking size and capacity\n
+ * Step 2 - Creating vector with size and default value and checking size and capacity\n
+ * Step 3 - Creating vector with size, capacity and default value and checking size and capacity\n
+ * Step 4 - Creating vector with constructor which can take array and size and checking size\n
+ * Step 5 - Creating vector with constructor which can take array, from element and to element and checking size\n
+ * Step 6 - Creating vector with constructor which can take two iterators and pass him iterators form std::vector and checking size\n
+ * Step 7 - Creating vector with constructor which can take two iterators and pass him iterators form std::list and checking size\n
+ * Step 8 - Creating iterators;
+ *
+ * \section test_2 Stl algorithms test
  * 
  * Step 1 - Creating vector by using array elements awaited SIZE is 10 capacity is 11\n
  * Step 2 - Replace 5 instead 4 by using std::replace from standard library awaited value for vector[4] is 5\n
- * Step 3 - Creating dynamicArray object by using all constructors*\n
- * Step 4 - pushing 5 and printing size, capacity and first element\n
- * Step 5 - pushing 8 and printing size and capacity\n
- * Step 6 - pushing 20 and printing size and capacity\n
- * Step 7 - pushing 15 and printing size and capacity\n
- * Step 8 - pushing 13 and printing size and capacity\n
- * Step 9 - pushing tree 3 and printing size, capacity and elements of dynamicArray\n
- * Step 10 - poping element and print size, capacity and elements of dynamicArray\n
- * Step 11 - shrinking to fit printing size, capacity and elements of dynamicArray\n
+ * 
+ * \section test_3 Member functions test
+ *
+ * Step 1 - Creating empty vector*\n
+ * Step 2 - Pushing 5 and checking value\n
+ * Step 3 - Pushing 8 and checking value\n
+ * Step 4 - Pushing 20 and checking value\n
+ * Step 5 - Pushing 15 and checking value\n
+ * Step 6 - Pushing 13 and checking value\n
+ * Step 7 - Pushing tree 3 and checking size of dynamicArray\n
+ * Step 8 - Poping element and check size of dynamicArray\n
+ * Step 9 - Shrinking to fit and checking size, capacity and elements of dynamicArray\n
+ * Step 10 - Reserving and checking are capacity > than reserve value\n
+ * Step 11 - Clearing and checking size of DynamicArray\n
+ * Step 12 - Insert an element and check size of DynamicArray\n
+ *
+ * \section test_4 Testing my algorithm and work with templates
+ *
+ * Step 1 - Creating vector using constructor with two iterators\n
+ * Step 2 - Creating std::vector with values\n
+ * Step 3 - Creating std::list and pushing values\n
+ * Step 4 - Passing 3 containers to my own algorithm\n
+ * Step 5 - Passing simple type and getting an error\n
+ * Step 6 - Passing simple type to my algorithm which can take only int\n
+ * Step 7 - Passing other type and getting an error\n
  *
  * \section Installation
  *
